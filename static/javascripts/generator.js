@@ -489,6 +489,7 @@ var ikrpg = ikrpg || {};
       
       var wornArmorDB = {
         "Alchemist's Leather": { "spd": 0, "def": -1, "arm": 5, "description": "" },
+        "Armored Diving Suit": { "spd": 0, "def": -2, "arm": 7, "description": "stats for underwater" },
         "Armored Great Coat": { "spd": 0, "def": -1, "arm": 5, "description": "" },
         "Assault Kommando Armor": { "spd": 0, "def": -2, "arm": 7, "description": "" },
         "Bastion Heavy Plate": { "spd": -3, "def": -4, "arm": 10, "description": "" },
@@ -534,6 +535,7 @@ var ikrpg = ikrpg || {};
         "Annihilator Blade": { "skill": "Great Weapon", "mat-mod": 0, "pow": 5, "notes": "reach" },
         "Assassin's Blade": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 4, "notes": "+2 backstrike" },
         "Axe": { "skill": "Hand Weapon", "mat-mod": 0, "pow": 3, "notes": "" },
+        "Axe, Boarding": { "skill": "Hand Weapon", "mat-mod": 0, "pow": 3, "notes": "+1 on climbing wood" },
         "Axe, Great": { "skill": "Great Weapon", "mat-mod": 0, "pow": 6, "notes": "Crit: +1 die dmg" },
         "Axe, Horseman's": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 3, "notes": "reach, mounted: at-mod 0, POW 5, +2 charge at" },
         "Axe, Ice": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 2, "notes": "+1 to Climbing rolls" },
@@ -551,6 +553,7 @@ var ikrpg = ikrpg || {};
         "Blessed Lance": { "skill": "Lance", "mat-mod": 0, "pow": 8, "notes": "ignore ARM/DEF spell effects, only charge at, can dmg incorporeal" },
         "Blighted Blade": { "skill": "Hand Weapon", "mat-mod": 2, "pow": 3, "notes": "crit: no tough, p.92" },
         "Bloodtracker Fighting Claw": { "skill": "Hand Weapon", "mat-mod": -2, "pow": 3, "notes": "" },
+        "Boarding Pike": { "skill": "Great Weapon", "mat-mod": 0, "pow": 5, "notes": "reach, enemy: -2 on charge" },
         "Caspian Battleblade": { "skill": "Great Weapon", "mat-mod": 0, "pow": 6, "notes": "1-H: mat-mod -1, POW 4" },
         "Cat's Paw": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 2, "notes": "Crit: Knockout" },
         "Cleft Spear": { "skill": "Great Weapon", "mat-mod": -2, "pow": 5, "notes": "reach, charge: +2 at rolls, Crit: 1 feat for +1 dmg die, 1-H: POW 4" },
@@ -578,6 +581,7 @@ var ikrpg = ikrpg || {};
         "Gaff, Pole": { "skill": "Great Weapon", "mat-mod": -1, "pow": 4, "notes": "reach, Crit: Knockdown on dmg" },
         "Garrote": { "skill": "Unarmed Weapon", "mat-mod": 0, "pow": "–", "notes": "srangle the victim" },
         "Garrote, Clockwork": { "skill": "Unarmed Weapon", "mat-mod": 0, "pow": "–", "notes": "strangles the victim" },
+        "Grappling Hook": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 4, "notes": "range 4'', feat: push target towards" },
         "Halbert": { "skill": "Great Weapon", "mat-mod": 0, "pow": 5, "notes": "reach, +2 charge at, 1-H: at-mod -1, POW 4" },
         "Hand Pick": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 2, "notes": "1 feat: additional dmg die against knocked down targets" },
         "Hooked Great Sword": { "skill": "Great Weapon", "mat-mod": -2, "pow": 6, "notes": "reach, 1-H: POW 5" },
@@ -707,6 +711,8 @@ var ikrpg = ikrpg || {};
         "Pen, Grenade": { "rng": 5, "skill": "Thrown Weapon", "pow": "*", "rat-mod": -2, "notes": "several grenates, KNG p. 244", "ammo": "–" },
         "Pen, Shot": { "rng": 2, "skill": "Pistol", "pow": 8, "rat-mod": -2, "notes": "", "ammo": "1" },
         "Pistol": { "rng": 8, "skill": "Pistol", "pow": 10, "rat-mod": 0, "notes": "", "ammo": "1" },
+        "Pistol, 3-barreled Duckfoot": { "rng": 6, "skill": "Pistol", "pow": 8, "rat-mod": -1, "notes": "Spray, 1 action to reload", "ammo": "1" },
+        "Pistol, 6-barreled Duckfoot": { "rng": 6, "skill": "Pistol", "pow": 11, "rat-mod": -2, "notes": "Spray, 1 action to reload", "ammo": "1" },
         "Pistol, Collapsible": { "rng": 7, "skill": "Pistol", "pow": 10, "rat-mod": -1, "notes": "easy to hide", "ammo": "1" },
         "Pistol, Holdout": { "rng": 4, "skill": "Pistol", "pow": 8, "rat-mod": 1, "notes": "", "ammo": "1" },
         "Pistol, Magelock": { "rng": 10, "skill": "Pistol", "pow": 10, "rat-mod": 0, "notes": "", "ammo": "1" },
@@ -770,11 +776,10 @@ var ikrpg = ikrpg || {};
         "Feat: Powerful Caster": undefined,
         "Feat: Prescient": undefined,
         "Feat: Revitalize": undefined,
-        "Feat: Shield Breaker": undefined,
-        "Feat: Swashbuckler": undefined,
         "Feat: Quick Cast": undefined,
         "Feat: Quick Thinking": undefined,
         "Feat: Shield Breaker": undefined,
+        "Feat: Swashbuckler": undefined,
         "Feat: Strength of Will": undefined,
         "Feat: Unconventional Warfare": undefined,
         "Feat: Untouchable": undefined,
@@ -801,6 +806,8 @@ var ikrpg = ikrpg || {};
     // ## Abilities DB [all abilities, but only names] ## \\ 
     (function() {
       
+      //Max length = “The maximum description size!“ 29 chars
+
       var abilitiesDB = { // { description: "" }
         "'Jack Marshal": undefined,
         "Abomination": undefined,
@@ -831,7 +838,6 @@ var ikrpg = ikrpg || {};
         "Archer": undefined,
         "Arcing Shot": undefined,
         "Artificer": undefined,
-        "Astute": undefined,
         "Astute": undefined,
         "Athanc Shard": undefined,
         "Authority": undefined,
@@ -1060,6 +1066,7 @@ var ikrpg = ikrpg || {};
         "Imperishable Conviction": undefined,
         "Impervious Wall Stance": undefined,
         "Improvised Formula": undefined,
+        "In Plain Sight": undefined,
         "Inflict Pain": undefined,
         "Inscribe Formulae": undefined,
         "Inscribe Thrall Rune": undefined,
@@ -1088,6 +1095,7 @@ var ikrpg = ikrpg || {};
         "Man of Iron": undefined,
         "Mark Target": undefined,
         "Marksman": undefined,
+        "Master and Commander": undefined,
         "Master Chymist": undefined,
         "Maul": undefined,
         "Meat Alchemy": undefined,
@@ -2686,7 +2694,7 @@ var ikrpg = ikrpg || {};
         choices(arrayPairs(_languages, languages), "Choose 1"),
         range(_height, 60, 75),
         range(_weight, 85, 180),
-        listItem(_notes, "begins the game with an additional ability selected from on of the careers")
+        listItem(_notes, "begins the game with an additional ability selected from one of the careers")
       ],
       "Nyss (FMF)": [
         string(_race, "Nyss"),
@@ -4377,6 +4385,23 @@ var ikrpg = ikrpg || {};
         listItem(_gear, "25 sl"),
         listItem(_benefits, "Feat: Revitalize")
       ],
+      "Naval Officer": [
+        listItem(_careers, "Naval Officer"),
+        list(_abilities, [
+          "Battle Plan: Coordinated Strike",
+          "Master and Commander",
+          "Natural Leader"]),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Great Weapon",
+          "Pistol"]), "Choose 1"),
+        list(_occupational_skills, ["Command", "Navigation", "Sailing", "Swimming"]),
+        number(_gold, 65),
+        listItem(_gear, "officer's uniform"),
+        choices([
+          arrayPair(_ranged_weapons, "Pistol"),
+          arrayPair(_melee_weapons, "Cutlass")], "Choose 1")
+      ],
       "Nihilator": [
         listItem(_careers, "Nihilator"),
         list(_abilities, ["Berserk", "Fearless"]),
@@ -4880,6 +4905,25 @@ var ikrpg = ikrpg || {};
         number(_gold, 25),
         listItem(_melee_weapons, "Halbert"),
         listItem(_armors, "Full Plate")
+      ],
+      "Smuggler": [
+        listItem(_careers, "Smuggler"),
+        list(_abilities, ["Conniver", "In Plain Sight", "Port of Call"]),
+        choices(arrayPairs(_connections, [
+          "criminal",
+          "pirate crew"]), "Choose 1"),
+        choices(arrayPairs(_military_skills, [
+          "Hand Weapon",
+          "Thrown Weapon"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Bribery",
+          "Deception",
+          "Lock Picking",
+          "Lock Picking",
+          "Sailing",
+          "Sneak",
+          "Streetwise"]),
+        number(_gold, 175)
       ],
       "Soldier": [
         listItem(_careers, "Soldier"),
@@ -5498,6 +5542,48 @@ var ikrpg = ikrpg || {};
         list(_gear, ["Duskwolf", "tack"])
       ]
     };
+    var characterBackgrounds = {
+      "Civil War Veteran": [
+        listItem(_notes, "Character Background: Civil War Veteran"),
+        listItem(_notes, "Character Background Prerequisite: Cygnaran character"),
+        listItem(_notes, "Considered a Hero: +1 on non-Intimidation skill rolls with patriotic Cygnarans."),
+        listItem(_notes, "Decorated Veteran: Has received commendations or impressive collection of scars."),
+        listItem(_notes, "War Stories: Add Oratory 3 to list of potential Occupational skills.")
+      ],
+      "Dragon-Marked": [
+        listItem(_notes, "Character Background: Dragon-Marked"),
+        listItem(_notes, "Character Background Prerequisite: Cygnaran character"),
+        choices(arrayPairs(_benefits, [
+          "Tough"]), "If you choose Tough,<br />do not choose a benefit<br />from your archetype"),
+        listItem(_notes, "Blight Scarred: The character gains +1 to Intimidation skill rolls"),
+        listItem(_notes, "Nothing Scares Me Anymore: Roll an additional die to resist Terror."),
+        listItem(_notes, "This character always has the higher stat + Intimidation total if another character uses Intimidation.")
+      ],
+      "Hammer Veteran": [
+        listItem(_notes, "Character Background: Hammer Veteran"),
+        listItem(_notes, "Character Background Prerequisite: Any non-Military Officer Khadoran character."),
+        listItem(_notes, "Distrust of Superiors: –1 penalty on all non-Intimidation social rolls involving officers (also Military Officers)."),
+        listItem(_notes, "Veteran Wisdom: +2 to command range and a +1 bonus to social rolls involving other soldiers."),
+        listItem(_notes, "Will to Survive: Add Survival 2 to list of potential Occupational skills.")
+      ],
+      "Lord of Umbrey": [
+        listItem(_notes, "Character Background: Lord of Umbrey"),
+        listItem(_notes, "Character Background Prerequisite: Character must be Khadoran and either Aristocrat, Horseman, Iron Fang, Knight, Man-O-War, and Khadoran career options."),
+        listItem(_notes, "Air of Authority: While in Umbrean lands, the character can expect hospitality from local authorities and nobles"),
+        listItem(_notes, "Knowledge of the Old Ways: Add Etiquette 3 and Lore (history) 3 to list of potential Occupational skills."),
+        choices([
+          arrayPair(_gear, "Karpathan destrier"),
+          arrayPair(_gear, "Pozdyov warhorse"),
+          arrayPair(_abilities, "Trained Rider")], "Choose either the destrier<br />or the warhorse.<br />Choose Trained Rider<br />if not already known")
+      ],
+      "Vanquished Soldier": [
+        listItem(_notes, "Character Background: Vanquished Soldier"),
+        listItem(_notes, "Character Background Prerequisite: Any non-Military Officer Khadoran character."),
+        listItem(_notes, "Black Reputation: –1 penalty on all non-Intimidation social rolls for patriotic Cygnarans and +1 to Intimidation."),
+        listItem(_notes, "Prison Contacts: Add Connection (criminal) to list of possible connections. Remove all other possible connections."),
+        listItem(_notes, "War Hardens a Man: Add 2 additional damage circles in the PHY life spiral.")
+      ]
+    };
     var adventuringCompanies = {
       "Agents of the Crucible": [
         listItem(_notes, "Adventuring Company: Agents of the Crucible"),
@@ -5586,8 +5672,18 @@ var ikrpg = ikrpg || {};
           "Command",
           "Deception",
           "Lore (any)",
-          "Negotiation"]), "Choose 1 if Blackclad"),
-        listItem(_notes, "All non-Blackclad members of the party gain one additional rank in the general skill of their choice"),
+          "Negotiation"]), "Choose 1 if<br />Blackclad"),
+        choices(arrayPairs(_occupational_skills, [
+          "Animal Handling",
+          "Climbing",
+          "Detection",
+          "Driving",
+          "Gambling",
+          "Intimidation",
+          "Jumping",
+          "Lore (any)",
+          "Riding",
+          "Swimming"]), "Choose 1 if<br />not Blackclad")
       ],
       "Crusaders": [
         listItem(_notes, "Adventuring Company: Crusaders"),
@@ -6041,6 +6137,7 @@ var ikrpg = ikrpg || {};
     generator.castes = castes;
     generator.archetypes = archetypes;
     generator.careers = careers;
+    generator.characterBackgrounds = characterBackgrounds;
     generator.adventuringCompanies = adventuringCompanies;
     
   })();
@@ -6061,6 +6158,7 @@ var ikrpg = ikrpg || {};
     $.each(ikrpg.generator.races, addOption("#race-select"));
     $.each(ikrpg.generator.castes, addOption("#caste-select"));
     $.each(ikrpg.generator.archetypes, addOption("#archetype-select"));
+    $.each(ikrpg.generator.characterBackgrounds, addOption("#character-background-select"));
     
     
     var index = ikrpg.index.data;
@@ -6202,6 +6300,7 @@ var ikrpg = ikrpg || {};
       $("#archetype-select").change(lookupAndFillOut("#archetype-select", "#archetype-data", ikrpg.generator.archetypes));
       $("#career1-select").change(lookupAndFillOut("#career1-select", "#career1-data", ikrpg.generator.careers));
       $("#career2-select").change(lookupAndFillOut("#career2-select", "#career2-data", ikrpg.generator.careers));
+      $("#character-background-select").change(lookupAndFillOut("#character-background-select", "#character-background-data", ikrpg.generator.characterBackgrounds));
       $("#adventuring-company-select").change(lookupAndFillOut("#adventuring-company-select", "#adventuring-company-data", ikrpg.generator.adventuringCompanies));
             
     })();
