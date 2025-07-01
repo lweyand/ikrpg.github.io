@@ -5,9 +5,9 @@ var ikrpg = ikrpg || {};
 
 (function () {
 	'use strict';
-	
+
 	ikrpg.index = ikrpg.index || {};
-	
+
   // Ability
   // Adventure
   //     Scenario, Encounter, Scenario Setting
@@ -25,7 +25,7 @@ var ikrpg = ikrpg || {};
   // Benefit
   // Disease
   //     Disease Type, Disease Classification, Contraction Method,
-  //     Symptom, Disease
+  //     Symptom, Disease, Curse
   // Equipment
   //     Clothing, Equipment, Mount,
   //     Riding Equipment, Food
@@ -194,9 +194,33 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Air of Legitimacy",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Alias",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Always a Deal to be Made",
       publication: "Urban Adventure",
       page:        "10",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Amateur Surgery",
+      publication: "No Quarter #70",
+      page:        "106",
       category:    "Ability",
       subcategory: "",
       game:        "FMF"
@@ -267,11 +291,27 @@ var ikrpg = ikrpg || {};
     },
     {
       name:        "Anatomist",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Anatomist",
       publication: "Skorne Empire",
       page:        "62",
       category:    "Ability",
       subcategory: "",
       game:        "IKU"
+    },
+    {
+      name:        "Anestetize",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
     },
     {
       name:        "Anestetize",
@@ -1146,9 +1186,25 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Bonesetter",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Brawler",
       publication: "Urban Adventure",
       page:        "10",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Break the Ice",
+      publication: "No Quarter #68",
+      page:        "103",
       category:    "Ability",
       subcategory: "",
       game:        "FMF"
@@ -1522,6 +1578,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Cordeur",
+      publication: "No Quarter #72",
+      page:        "101",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Corruptor",
       publication: "Urban Adventure",
       page:        "68",
@@ -1696,6 +1760,14 @@ var ikrpg = ikrpg || {};
       category:    "Ability",
       subcategory: "",
       game:        "IKU"
+    },
+    {
+      name:        "Dervish",
+      publication: "No Quarter #69",
+      page:        "108",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
     },
     {
       name:        "Dhunia's Strike",
@@ -2530,6 +2602,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Fisherman",
+      publication: "No Quarter #68",
+      page:        "103",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Fist of God",
       publication: "Kings, Nations, and Gods",
       page:        "361",
@@ -2762,6 +2842,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Go with your Gut",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Goad",
       publication: "Unleashed Core Rules",
       page:        "161",
@@ -2797,6 +2885,14 @@ var ikrpg = ikrpg || {};
       name:        "Grave Man",
       publication: "Urban Adventure",
       page:        "68",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Grease the Wheels",
+      publication: "No Quarter #70",
+      page:        "106",
       category:    "Ability",
       subcategory: "",
       game:        "FMF"
@@ -3250,6 +3346,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Information Network",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Inscribe Formulae",
       publication: "Core Rules",
       page:        "164",
@@ -3578,6 +3682,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Master and Commander",
+      publication: "No Quarter #68",
+      page:        "103",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Master Chymist",
       publication: "Skorne Empire",
       page:        "65",
@@ -3690,6 +3802,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Nautical Sabotage",
+      publication: "No Quarter #72",
+      page:        "101",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Necromancer",
       publication: "Urban Adventure",
       page:        "68",
@@ -3722,9 +3842,25 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "No I'm Fine",
+      publication: "No Quarter #70",
+      page:        "106",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Oath of Silence",
       publication: "Kings, Nations, and Gods",
       page:        "362",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Of the North",
+      publication: "No Quarter #68",
+      page:        "103",
       category:    "Ability",
       subcategory: "",
       game:        "FMF"
@@ -4210,6 +4346,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Repel Boarders!",
+      publication: "No Quarter #69",
+      page:        "108",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Resonance: Devourer Warbeast",
       publication: "Unleashed Core Rules",
       page:        "164",
@@ -4450,6 +4594,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Salvage Rights",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Sanguine Bond",
       publication: "Kings, Nations, and Gods",
       page:        "362",
@@ -4517,6 +4669,14 @@ var ikrpg = ikrpg || {};
       name:        "Scrounge",
       publication: "Core Rules",
       page:        "167",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Sea Hunter",
+      publication: "No Quarter #68",
+      page:        "103",
       category:    "Ability",
       subcategory: "",
       game:        "FMF"
@@ -4632,6 +4792,14 @@ var ikrpg = ikrpg || {};
       category:    "Ability",
       subcategory: "",
       game:        "IKU"
+    },
+    {
+      name:        "Shanghai",
+      publication: "No Quarter #72",
+      page:        "101",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
     },
     {
       name:        "Share the Load",
@@ -5080,6 +5248,14 @@ var ikrpg = ikrpg || {};
       category:    "Ability",
       subcategory: "",
       game:        "IKU"
+    },
+    {
+      name:        "Stopgap",
+      publication: "No Quarter #72",
+      page:        "101",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
     },
     {
       name:        "Storm Booster",
@@ -6115,6 +6291,22 @@ var ikrpg = ikrpg || {};
       subcategory: "Encounter",
       game:        "IKU"
     },
+		{
+      name:        "Deserted Island",
+      publication: "No Quarter #71",
+      page:        "108",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
+    },
+		{
+      name:        "Deserted Ship",
+      publication: "No Quarter #71",
+      page:        "108",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
+    },
     {
       name:        "Dirty Deeds",
       publication: "No Quarter #52",
@@ -6155,6 +6347,14 @@ var ikrpg = ikrpg || {};
       subcategory: "Encounter",
       game:        "FMF"
     },
+		{
+      name:        "Heat Wave",
+      publication: "No Quarter #71",
+      page:        "108",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
+    },
     {
       name:        "Hogshead",
       publication: "Fridays Unleashed 2/20/2015",
@@ -6167,6 +6367,14 @@ var ikrpg = ikrpg || {};
       name:        "Live Ammo",
       publication: "Wild Adventure",
       page:        "44",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
+    },
+		{
+      name:        "Pirate Boarding Party",
+      publication: "No Quarter #71",
+      page:        "108",
       category:    "Adventure",
       subcategory: "Encounter",
       game:        "IKU"
@@ -6186,6 +6394,14 @@ var ikrpg = ikrpg || {};
       category:    "Adventure",
       subcategory: "Encounter",
       game:        "FMF"
+    },
+		{
+      name:        "Sea Drake Nest",
+      publication: "No Quarter #71",
+      page:        "109",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
     },
     {
       name:        "Sewer Surprise",
@@ -6234,6 +6450,14 @@ var ikrpg = ikrpg || {};
       category:    "Adventure",
       subcategory: "Encounter",
       game:        "FMF"
+    },
+		{
+      name:        "Whirlpool",
+      publication: "No Quarter #71",
+      page:        "109",
+      category:    "Adventure",
+      subcategory: "Encounter",
+      game:        "IKU"
     },
     // ##### Adventure > Scenario Setting ##### \\
     {
@@ -6999,6 +7223,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Remedy",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Ability",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Remel's Embrace",
       publication: "Kings, Nations, and Gods",
       page:        "247",
@@ -7621,6 +7853,38 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Four Star Syndicate (Dark Dealings)",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Four Star Syndicate (King's Favor)",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Four Star Syndicate (High Society)",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Four Star Syndicate (Mateau Enforcers)",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
       name:        "Fringe Cultists",
       publication: "No Quarter #48",
       page:        "72",
@@ -7693,6 +7957,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Khadoran Royal Navy",
+      publication: "No Quarter #70",
+      page:        "107",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
       name:        "Korsk Stanzynat Mustyn",
       publication: "Urban Adventure",
       page:        "78",
@@ -7712,6 +7984,14 @@ var ikrpg = ikrpg || {};
       name:        "Mercenary Charter",
       publication: "Core Rules",
       page:        "152",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Mateau Traders",
+      publication: "No Quarter #70",
+      page:        "108",
       category:    "Character Creation",
       subcategory: "Adventuring Company",
       game:        "FMF"
@@ -7800,6 +8080,22 @@ var ikrpg = ikrpg || {};
       name:        "Resistance Saboteurs",
       publication: "No Quarter #65",
       page:        "94",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Riverboat Raiders",
+      publication: "No Quarter #70",
+      page:        "108",
+      category:    "Character Creation",
+      subcategory: "Adventuring Company",
+      game:        "FMF"
+    },
+    {
+      name:        "Seahunters",
+      publication: "No Quarter #70",
+      page:        "108",
       category:    "Character Creation",
       subcategory: "Adventuring Company",
       game:        "FMF"
@@ -8679,6 +8975,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Sawbones",
+      publication: "No Quarter #70",
+      page:        "103",
+      category:    "Character Creation",
+      subcategory: "Career",
+      game:        "FMF"
+    },
+    {
       name:        "Scout",
       publication: "Unleashed Core Rules",
       page:        "134",
@@ -9016,6 +9320,14 @@ var ikrpg = ikrpg || {};
     },
     // ##### Character Creation > Career Option ##### \\
     {
+      name:        "Angler",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Arcane Tempest Gun Mage",
       publication: "Kings, Nations, and Gods",
       page:        "87",
@@ -9040,6 +9352,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Buccaneer",
+      publication: "No Quarter #70",
+      page:        "104",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Crucible Guard",
       publication: "Kings, Nations, and Gods",
       page:        "301",
@@ -9051,6 +9371,14 @@ var ikrpg = ikrpg || {};
       name:        "Cygnaran Warcaster",
       publication: "Kings, Nations, and Gods",
       page:        "87",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
+      name:        "Errant Marine",
+      publication: "No Quarter #69",
+      page:        "107",
       category:    "Character Creation",
       subcategory: "Career Option",
       game:        "FMF"
@@ -9112,6 +9440,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Idrian Corsair",
+      publication: "No Quarter #69",
+      page:        "108",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Illuminated Arcanist",
       publication: "Kings, Nations, and Gods",
       page:        "88",
@@ -9168,6 +9504,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Merchant Trader",
+      publication: "No Quarter #70",
+      page:        "104",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Naval Officer",
       publication: "No Quarter #67",
       page:        "107",
@@ -9176,9 +9520,33 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Naval Officer",
+      publication: "No Quarter #68",
+      page:        "103",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
+      name:        "Ice Master",
+      publication: "No Quarter #68",
+      page:        "103",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Ordic Warcaster",
       publication: "Kings, Nations, and Gods",
       page:        "303",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
+      name:        "Press Ganger",
+      publication: "No Quarter #72",
+      page:        "100",
       category:    "Character Creation",
       subcategory: "Career Option",
       game:        "FMF"
@@ -9232,6 +9600,38 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Sea Sorcerer (Fire)",
+      publication: "No Quarter #72",
+      page:        "100",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+		{
+      name:        "Sea Sorcerer (Ice)",
+      publication: "No Quarter #72",
+      page:        "100",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+		{
+      name:        "Sea Sorcerer (Stone)",
+      publication: "No Quarter #72",
+      page:        "100",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+		{
+      name:        "Sea Sorcerer (Storm)",
+      publication: "No Quarter #72",
+      page:        "100",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Smuggler",
       publication: "No Quarter #67",
       page:        "107",
@@ -9280,6 +9680,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Treasure Hunter",
+      publication: "No Quarter #70",
+      page:        "105",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Trencher Commando",
       publication: "Kings, Nations, and Gods",
       page:        "88",
@@ -9288,9 +9696,25 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Vagabond",
+      publication: "No Quarter #72",
+      page:        "101",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
       name:        "Vassal of Menoth",
       publication: "Kings, Nations, and Gods",
       page:        "354",
+      category:    "Character Creation",
+      subcategory: "Career Option",
+      game:        "FMF"
+    },
+    {
+      name:        "Watch Inspector",
+      publication: "No Quarter #70",
+      page:        "105",
       category:    "Character Creation",
       subcategory: "Career Option",
       game:        "FMF"
@@ -9345,7 +9769,7 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
-      name:        "Bogrun",
+      name:        "Bogrin",
       publication: "Wild Adventure",
       page:        "10",
       category:    "Character Creation",
@@ -9620,7 +10044,7 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
-      name:        "Armored Driving Suit",
+      name:        "Armored Diving Suit",
       publication: "No Quarter #67",
       page:        "108",
       category:    "Armory",
@@ -10149,6 +10573,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Bone Saw",
+      publication: "No Quarter #70",
+      page:        "108",
+      category:    "Armory",
+      subcategory: "Melee Weapon",
+      game:        "FMF"
+    },
+    {
       name:        "Caspian Battleblade",
       publication: "Core Rules",
       page:        "254",
@@ -10160,6 +10592,14 @@ var ikrpg = ikrpg || {};
       name:        "Cat's Paw",
       publication: "No Quarter #45",
       page:        "61",
+      category:    "Armory",
+      subcategory: "Melee Weapon",
+      game:        "FMF"
+    },
+    {
+      name:        "Cleaver",
+      publication: "No Quarter #70",
+      page:        "108",
       category:    "Armory",
       subcategory: "Melee Weapon",
       game:        "FMF"
@@ -11511,6 +11951,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Hand Arbalest",
+      publication: "No Quarter #69",
+      page:        "109",
+      category:    "Armory",
+      subcategory: "Ranged Weapon",
+      game:        "FMF"
+    },
+    {
       name:        "Hand Cannon",
       publication: "Core Rules",
       page:        "265",
@@ -11634,6 +12082,14 @@ var ikrpg = ikrpg || {};
       name:        "Man-O-War Shield Cannon",
       publication: "Kings, Nations, and Gods",
       page:        "187",
+      category:    "Armory",
+      subcategory: "Ranged Weapon",
+      game:        "FMF"
+    },
+    {
+      name:        "Menoth's Rebuke",
+      publication: "No Quarter #69",
+      page:        "109",
       category:    "Armory",
       subcategory: "Ranged Weapon",
       game:        "FMF"
@@ -11914,6 +12370,14 @@ var ikrpg = ikrpg || {};
       name:        "Skyhammer",
       publication: "Kings, Nations, and Gods",
       page:        "367",
+      category:    "Armory",
+      subcategory: "Ranged Weapon",
+      game:        "FMF"
+    },
+    {
+      name:        "Skyhammer Deck Gun",
+      publication: "No Quarter #69",
+      page:        "109",
       category:    "Armory",
       subcategory: "Ranged Weapon",
       game:        "FMF"
@@ -13376,6 +13840,15 @@ var ikrpg = ikrpg || {};
       subcategory: "Disease",
       game:        "FMF"
     },
+    // ##### Disease > Curse ##### \\
+    {
+      name:        "Sickened Sea",
+      publication: "No Quarter #69",
+      page:        "106",
+      category:    "Disease",
+      subcategory: "Curse",
+      game:        "FMF"
+    },
     // ##### Equipment > Clothing ##### \\
     {
       name:        "Boots, Mechanik's",
@@ -13515,6 +13988,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Cannon Lighter",
+      publication: "No Quarter #72",
+      page:        "102",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
+    },
+    {
       name:        "Cartographer's Kit",
       publication: "Wild Adventure",
       page:        "30",
@@ -13555,6 +14036,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Clockwork Diving Lantern",
+      publication: "No Quarter #72",
+      page:        "102",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
+    },
+    {
       name:        "Compass",
       publication: "No Quarter #61",
       page:        "90",
@@ -13574,6 +14063,14 @@ var ikrpg = ikrpg || {};
       name:        "Diving Bellows",
       publication: "No Quarter #67",
       page:        "110",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
+    },
+    {
+      name:        "Diving Suit",
+      publication: "No Quarter #72",
+      page:        "102",
       category:    "Equipment",
       subcategory: "Equipment",
       game:        "FMF"
@@ -13707,6 +14204,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Handheld Periscope",
+      publication: "No Quarter #72",
+      page:        "102",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
+    },
+    {
       name:        "Heat-Responsive Inks",
       publication: "No Quarter #59",
       page:        "70",
@@ -13721,6 +14226,14 @@ var ikrpg = ikrpg || {};
       category:    "Equipment",
       subcategory: "Equipment",
       game:        "IKU"
+    },
+    {
+      name:        "Life Ring",
+      publication: "No Quarter #72",
+      page:        "103",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
     },
     {
       name:        "Lightning Rod",
@@ -13755,6 +14268,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Marine Chronometer",
+      publication: "No Quarter #72",
+      page:        "103",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
+    },
+    {
       name:        "Mechanik's Tool Kit",
       publication: "Core Rules",
       page:        "275",
@@ -13777,6 +14298,14 @@ var ikrpg = ikrpg || {};
       category:    "Equipment",
       subcategory: "Equipment",
       game:        "IKU"
+    },
+    {
+      name:        "Navigator's Kit",
+      publication: "No Quarter #72",
+      page:        "103",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
     },
     {
       name:        "Necromancer's Kit",
@@ -13929,6 +14458,14 @@ var ikrpg = ikrpg || {};
       category:    "Equipment",
       subcategory: "Equipment",
       game:        "IKU"
+    },
+    {
+      name:        "Speaking Horn",
+      publication: "No Quarter #72",
+      page:        "103",
+      category:    "Equipment",
+      subcategory: "Equipment",
+      game:        "FMF"
     },
     {
       name:        "Spider Harness",
@@ -14488,6 +15025,14 @@ var ikrpg = ikrpg || {};
     },
     {
       name:        "Ord",
+      publication: "No Quarter #70",
+      page:        "97",
+      category:    "Geography",
+      subcategory: "Nation",
+      game:        "FMF"
+    },
+    {
+      name:        "Ord",
       publication: "Kings, Nations, and Gods",
       page:        "251",
       category:    "Geography",
@@ -14519,6 +15064,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     // ##### Geography > Culture ##### \\
+    {
+      name:        "Arjun",
+      publication: "No Quarter #72",
+      page:        "97",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
     {
       name:        "Arjun",
       publication: "Unleashed Core Rules",
@@ -14761,6 +15314,14 @@ var ikrpg = ikrpg || {};
     },
     {
       name:        "Radiz",
+      publication: "No Quarter #72",
+      page:        "98",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+    {
+      name:        "Radiz",
       publication: "Unleashed Core Rules",
       page:        "61",
       category:    "Geography",
@@ -14782,6 +15343,14 @@ var ikrpg = ikrpg || {};
       category:    "Geography",
       subcategory: "Culture",
       game:        "FMF"
+    },
+    {
+      name:        "Sinari",
+      publication: "No Quarter #72",
+      page:        "97",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
     },
     {
       name:        "Sinari",
@@ -15370,6 +15939,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Ancient Icthier",
+      publication: "No Quarter #69",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Bainsmarket",
       publication: "Kings, Nations, and Gods",
       page:        "57",
@@ -15386,6 +15963,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Berck",
+      publication: "No Quarter #70",
+      page:        "97",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Boarsgate",
       publication: "Kings, Nations, and Gods",
       page:        "292",
@@ -15394,9 +15979,25 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Bottomton",
+      publication: "No Quarter #70",
+      page:        "99",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Carre Dova",
       publication: "Kings, Nations, and Gods",
       page:        "286",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
+      name:        "Carre Dova",
+      publication: "No Quarter #70",
+      page:        "100",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
@@ -15458,12 +16059,28 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Deadsands Harbor",
+      publication: "No Quarter #69",
+      page:        "102",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Elsinberg",
       publication: "Kings, Nations, and Gods",
       page:        "229",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
+    },
+    {
+      name:        "Falconbank",
+      publication: "No Quarter #72",
+      page:        "98",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "IKU"
     },
     {
       name:        "Fellig",
@@ -15485,6 +16102,14 @@ var ikrpg = ikrpg || {};
       name:        "Five Fingers",
       publication: "Kings, Nations, and Gods",
       page:        "287",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
+      name:        "Five Fingers",
+      publication: "No Quarter #70",
+      page:        "101",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
@@ -15633,6 +16258,14 @@ var ikrpg = ikrpg || {};
       subcategory: "City/Fortress",
       game:        "IKU"
     },
+		{
+      name:        "Konesta",
+      publication: "No Quarter #71",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "IKU"
+    },
     {
       name:        "Korsk",
       publication: "Kings, Nations, and Gods",
@@ -15714,6 +16347,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Morthbell",
+      publication: "No Quarter #69",
+      page:        "103",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "New Larkholm",
       publication: "Kings, Nations, and Gods",
       page:        "76",
@@ -15746,6 +16387,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Ohk",
+      publication: "No Quarter #68",
+      page:        "95",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Orven",
       publication: "Kings, Nations, and Gods",
       page:        "80",
@@ -15773,6 +16422,14 @@ var ikrpg = ikrpg || {};
       name:        "Port Vladovar",
       publication: "Kings, Nations, and Gods",
       page:        "148",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
+      name:        "Port Vladovar",
+      publication: "No Quarter #68",
+      page:        "97",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
@@ -15850,6 +16507,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Skrovenberg",
+      publication: "No Quarter #68",
+      page:        "98",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Steelwater Flats",
       publication: "Kings, Nations, and Gods",
       page:        "52",
@@ -15861,6 +16526,14 @@ var ikrpg = ikrpg || {};
       name:        "Sul",
       publication: "Kings, Nations, and Gods",
       page:        "352",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
+      name:        "Sul",
+      publication: "No Quarter #69",
+      page:        "104",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
@@ -15882,6 +16555,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Thelborn",
+      publication: "No Quarter #68",
+      page:        "99",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
       name:        "Tokraas",
       publication: "Skorne Empire",
       page:        "38",
@@ -15901,6 +16582,14 @@ var ikrpg = ikrpg || {};
       name:        "Uldenfrost",
       publication: "Kings, Nations, and Gods",
       page:        "170",
+      category:    "Geography",
+      subcategory: "City/Fortress",
+      game:        "FMF"
+    },
+    {
+      name:        "Uldenfrost",
+      publication: "No Quarter #68",
+      page:        "100",
       category:    "Geography",
       subcategory: "City/Fortress",
       game:        "FMF"
@@ -15930,6 +16619,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     // ##### Geography > Geographic Region ##### \\
+    {
+      name:        "Acrennia Bay",
+      publication: "No Quarter #69",
+      page:        "106",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
     {
       name:        "Arman Moors",
       publication: "Unleashed Core Rules",
@@ -15995,6 +16692,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Deadsands Bay",
+      publication: "No Quarter #69",
+      page:        "105",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
+    {
       name:        "Dragonspine Peaks",
       publication: "Unleashed Core Rules",
       page:        "87",
@@ -16043,6 +16748,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Harber & Sithney Rivers",
+      publication: "No Quarter #69",
+      page:        "106",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
+    {
       name:        "Helkan's Reward",
       publication: "Skorne Empire",
       page:        "39",
@@ -16057,6 +16770,14 @@ var ikrpg = ikrpg || {};
       category:    "Geography",
       subcategory: "Geographic Region",
       game:        "IKU"
+    },
+    {
+      name:        "Helvongen Bay",
+      publication: "No Quarter #68",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
     },
     {
       name:        "Howling Wastes",
@@ -16075,12 +16796,28 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Kulvorn Bay",
+      publication: "No Quarter #68",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
+    {
       name:        "Malgur Forest",
       publication: "Unleashed Core Rules",
       page:        "81",
       category:    "Geography",
       subcategory: "Geographic Region",
       game:        "IKU"
+    },
+    {
+      name:        "Menoth's Chalice",
+      publication: "No Quarter #69",
+      page:        "106",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
     },
     {
       name:        "Mirketh Lake",
@@ -16179,6 +16916,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "The Khardic Sea",
+      publication: "No Quarter #68",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
+    {
       name:        "The Marck",
       publication: "Unleashed Core Rules",
       page:        "96",
@@ -16227,6 +16972,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "The Severed Reach",
+      publication: "No Quarter #68",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
+    {
       name:        "The Shadoweald",
       publication: "Unleashed Core Rules",
       page:        "83",
@@ -16241,6 +16994,14 @@ var ikrpg = ikrpg || {};
       category:    "Geography",
       subcategory: "Geographic Region",
       game:        "IKU"
+    },
+    {
+      name:        "The Windless Waste",
+      publication: "No Quarter #68",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
     },
     {
       name:        "Thelborn",
@@ -16314,6 +17075,14 @@ var ikrpg = ikrpg || {};
       subcategory: "Geographic Region",
       game:        "IKU"
     },
+		{
+      name:        "Zu",
+      publication: "No Quarter #71",
+      page:        "101",
+      category:    "Geography",
+      subcategory: "Geographic Region",
+      game:        "FMF"
+    },
     // ##### Individual ##### \\
     {
       name:        "Aleksandra Zerkova",
@@ -16327,6 +17096,14 @@ var ikrpg = ikrpg || {};
       name:        "Alma Barlow",
       publication: "Bitter Medicine",
       page:        "5",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Alvus Ecan, Priest",
+      publication: "No Quarter #69",
+      page:        "105",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16380,6 +17157,22 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Ayn Vanar, Empress",
+      publication: "No Quarter #69",
+      page:        "59",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Barak Afonos, Posadnik",
+      publication: "No Quarter #68",
+      page:        "100",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Baird Cathor II, King",
       publication: "Kings, Nations, and Gods",
       page:        "201",
@@ -16420,6 +17213,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Bollmeglanvi",
+      publication: "No Quarter #72",
+      page:        "99",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+    {
       name:        "Bors Gately, General",
       publication: "Kings, Nations, and Gods",
       page:        "74",
@@ -16428,9 +17229,33 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Budimir Nadmienovich, Kommander",
+      publication: "No Quarter #68",
+      page:        "96",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Casner Gant",
+      publication: "No Quarter #70",
+      page:        "98",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Coleman Stryker, Cygnaran Warcaster",
       publication: "No Quarter #50",
       page:        "39",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Colten, Potentate",
+      publication: "No Quarter #69",
+      page:        "102",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16452,6 +17277,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Darr Belaith",
+      publication: "No Quarter #68",
+      page:        "99",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Deyar Glabryn, Archduke",
       publication: "Kings, Nations, and Gods",
       page:        "211",
@@ -16463,6 +17296,14 @@ var ikrpg = ikrpg || {};
       name:        "Directrix, Iron Mother",
       publication: "No Quarter #48",
       page:        "35",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Dmitri Meshik, Posadnik",
+      publication: "No Quarter #68",
+      page:        "98",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16500,7 +17341,23 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
-      name:        "Evelin Turpin, Senior Commander",
+      name:        "Ellona Chambers",
+      publication: "No Quarter #70",
+      page:        "100",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Evelyn Turpin, Lord General",
+      publication: "No Quarter #70",
+      page:        "92",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Evelyn Turpin, Senior Commander",
       publication: "Kings, Nations, and Gods",
       page:        "74",
       category:    "Individual",
@@ -16559,6 +17416,14 @@ var ikrpg = ikrpg || {};
       name:        "Ghostmaker",
       publication: "No Quarter #63",
       page:        "91",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Gosaf Maz-Nazira",
+      publication: "No Quarter #69",
+      page:        "103",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16684,6 +17549,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Joln Rockbottom, Lord",
+      publication: "No Quarter #70",
+      page:        "100",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Karagh-Ko",
       publication: "No Quarter #64",
       page:        "86",
@@ -16716,9 +17589,25 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Kelva McQuarrie",
+      publication: "No Quarter #70",
+      page:        "101",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Knor",
       publication: "Fridays Unleashed 3/27/2015",
       page:        "1",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+		{
+      name:        "Kryssa, Conviction of Everblight",
+      publication: "No Quarter #71",
+      page:        "49",
       category:    "Individual",
       subcategory: "",
       game:        "IKU"
@@ -16743,6 +17632,14 @@ var ikrpg = ikrpg || {};
       name:        "Longchops",
       publication: "Fridays Unleashed 2/13/2015",
       page:        "1",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+    {
+      name:        "Lord Longfellow",
+      publication: "No Quarter #72",
+      page:        "73",
       category:    "Individual",
       subcategory: "",
       game:        "IKU"
@@ -16780,9 +17677,41 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Maestra Dialta Zuccho",
+      publication: "No Quarter #70",
+      page:        "101",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Magda McCallahan, Pirate Captain",
       publication: "No Quarter #54",
       page:        "69",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Malah Sek-Rash, Sea-Chief",
+      publication: "No Quarter #69",
+      page:        "104",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Malekus, the Burning Truth",
+      publication: "No Quarter #72",
+      page:        "23",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Marusia Kachikova",
+      publication: "No Quarter #68",
+      page:        "96",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16812,6 +17741,38 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Natalya Morezko",
+      publication: "No Quarter #70",
+      page:        "99",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Nocior Jaia, Preceptor",
+      publication: "No Quarter #69",
+      page:        "103",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Obrius, Senior Priest",
+      publication: "No Quarter #69",
+      page:        "104",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Olan Duggan, Lord General",
+      publication: "No Quarter #70",
+      page:        "90",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Oleg Strakhov, Kommander",
       publication: "Kings, Nations, and Gods",
       page:        "137",
@@ -16836,12 +17797,28 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Padrón Marco Graza",
+      publication: "No Quarter #70",
+      page:        "101",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Pyrrhus",
       publication: "No Quarter #65",
       page:        "65",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
+    },
+		{
+      name:        "Rök",
+      publication: "No Quarter #71",
+      page:        "12",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
     },
     {
       name:        "Rosa Petry, Owner of Petry's Firearms and Supplies",
@@ -16871,6 +17848,22 @@ var ikrpg = ikrpg || {};
       name:        "Quintin McCreevy",
       publication: "No Quarter #67",
       page:        "102",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Ricard Mateau",
+      publication: "No Quarter #70",
+      page:        "98",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Sansa Petryv",
+      publication: "No Quarter #68",
+      page:        "98",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -16932,6 +17925,22 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Svad Tzsekepi",
+      publication: "No Quarter #68",
+      page:        "100",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Tanith the Feral Song",
+      publication: "No Quarter #70",
+      page:        "81",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+    {
       name:        "Tara Florys, Long Shot Lieutenant",
       publication: "No Quarter #56",
       page:        "42",
@@ -16980,9 +17989,33 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "The Sister's Voice",
+      publication: "No Quarter #70",
+      page:        "101",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "The Twilight Sisters",
+      publication: "No Quarter #72",
+      page:        "75",
+      category:    "Individual",
+      subcategory: "",
+      game:        "IKU"
+    },
+    {
       name:        "Trenton Bouridor, Grand Paladin",
       publication: "Kings, Nations, and Gods",
       page:        "339",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Ubisch Oblezov, Count",
+      publication: "No Quarter #68",
+      page:        "96",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -17020,6 +18053,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Vincent Gollan, Lord General",
+      publication: "No Quarter #70",
+      page:        "94",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
       name:        "Vinter Raelthorne IV",
       publication: "Kings, Nations, and Gods",
       page:        "22",
@@ -17031,6 +18072,14 @@ var ikrpg = ikrpg || {};
       name:        "Vinter Raelthorne IV",
       publication: "No Quarter #60",
       page:        "57",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
+    },
+    {
+      name:        "Vitoria Maitlyn",
+      publication: "No Quarter #69",
+      page:        "94",
       category:    "Individual",
       subcategory: "",
       game:        "FMF"
@@ -17066,6 +18115,14 @@ var ikrpg = ikrpg || {};
       category:    "Individual",
       subcategory: "",
       game:        "IKU"
+    },
+    {
+      name:        "Vra Tzlorkin",
+      publication: "No Quarter #68",
+      page:        "100",
+      category:    "Individual",
+      subcategory: "",
+      game:        "FMF"
     },
     {
       name:        "Vyros Narr, Dawnlord",
@@ -18072,6 +19129,14 @@ var ikrpg = ikrpg || {};
     },
     // ##### Mechanika > Mechanikal Weapon ##### \\
     {
+      name:        "Akinetic Javelin",
+      publication: "No Quarter #50",
+      page:        "48",
+      category:    "Mechanika",
+      subcategory: "Mechanikal Weapon",
+      game:        "FMF"
+    },
+    {
       name:        "Andrei's Pistol",
       publication: "Immortality",
       page:        "28",
@@ -18091,6 +19156,14 @@ var ikrpg = ikrpg || {};
       name:        "Charged Spear",
       publication: "No Quarter #48",
       page:        "69",
+      category:    "Mechanika",
+      subcategory: "Mechanikal Weapon",
+      game:        "FMF"
+    },
+    {
+      name:        "Deprecator",
+      publication: "No Quarter #50",
+      page:        "49",
       category:    "Mechanika",
       subcategory: "Mechanikal Weapon",
       game:        "FMF"
@@ -18120,6 +19193,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Neutralizer",
+      publication: "No Quarter #50",
+      page:        "51",
+      category:    "Mechanika",
+      subcategory: "Mechanikal Weapon",
+      game:        "FMF"
+    },
+    {
       name:        "Northwind",
       publication: "No Quarter #47",
       page:        "61",
@@ -18139,6 +19220,14 @@ var ikrpg = ikrpg || {};
       name:        "Storm Glaive",
       publication: "Core Rules",
       page:        "288",
+      category:    "Mechanika",
+      subcategory: "Mechanikal Weapon",
+      game:        "FMF"
+    },
+    {
+      name:        "Tempest Shield",
+      publication: "No Quarter #50",
+      page:        "52",
       category:    "Mechanika",
       subcategory: "Mechanikal Weapon",
       game:        "FMF"
@@ -18485,14 +19574,6 @@ var ikrpg = ikrpg || {};
     },
     // ##### Mechanika > Mechanikal Device ##### \\
     {
-      name:        "Akinetic Javelin",
-      publication: "No Quarter #50",
-      page:        "48",
-      category:    "Mechanika",
-      subcategory: "Mechanikal Device",
-      game:        "FMF"
-    },
-    {
       name:        "Arcantrik Scope",
       publication: "Core Rules",
       page:        "286",
@@ -18501,17 +19582,17 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
-      name:        "Deprecator",
-      publication: "No Quarter #50",
-      page:        "49",
+      name:        "Farsight Googles",
+      publication: "Core Rules",
+      page:        "287",
       category:    "Mechanika",
       subcategory: "Mechanikal Device",
       game:        "FMF"
     },
     {
-      name:        "Farsight Googles",
-      publication: "Core Rules",
-      page:        "287",
+      name:        "Hydrophone",
+      publication: "No Quarter #72",
+      page:        "102",
       category:    "Mechanika",
       subcategory: "Mechanikal Device",
       game:        "FMF"
@@ -18544,22 +19625,6 @@ var ikrpg = ikrpg || {};
       name:        "Mechanikal Prosthetic, Leg",
       publication: "Core Rules",
       page:        "288",
-      category:    "Mechanika",
-      subcategory: "Mechanikal Device",
-      game:        "FMF"
-    },
-    {
-      name:        "Neutralizer",
-      publication: "No Quarter #50",
-      page:        "51",
-      category:    "Mechanika",
-      subcategory: "Mechanikal Device",
-      game:        "FMF"
-    },
-    {
-      name:        "Tempest Shield",
-      publication: "No Quarter #50",
-      page:        "52",
       category:    "Mechanika",
       subcategory: "Mechanikal Device",
       game:        "FMF"
@@ -19915,6 +20980,14 @@ var ikrpg = ikrpg || {};
       name:        "House Kabalis Rifleman",
       publication: "Immortality",
       page:        "44",
+      category:    "Monster",
+      subcategory: "Monster/Opponent",
+      game:        "FMF"
+    },
+    {
+      name:        "Hull Grunder",
+      publication: "No Quarter #68",
+      page:        "104",
       category:    "Monster",
       subcategory: "Monster/Opponent",
       game:        "FMF"
@@ -22843,6 +23916,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Vitoria Maitlyn",
+      publication: "No Quarter #69",
+      page:        "97",
+      category:    "Monster",
+      subcategory: "Solo Monster/Opponent",
+      game:        "FMF"
+    },
+    {
       name:        "Vorath the Exile",
       publication: "No Quarter #62",
       page:        "81",
@@ -23046,6 +24127,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Daughters of the Flame",
+      publication: "No Quarter #69",
+      page:        "53",
+      category:    "Organization",
+      subcategory: "Military Organization",
+      game:        "FMF"
+    },
+    {
       name:        "Emerald Watch",
       publication: "Urban Adventure",
       page:        "42",
@@ -23089,6 +24178,14 @@ var ikrpg = ikrpg || {};
       name:        "Knights Exemplar",
       publication: "Kings, Nations, and Gods",
       page:        "337",
+      category:    "Organization",
+      subcategory: "Military Organization",
+      game:        "FMF"
+    },
+    {
+      name:        "Knights Exemplar",
+      publication: "No Quarter #69",
+      page:        "51",
       category:    "Organization",
       subcategory: "Military Organization",
       game:        "FMF"
@@ -23217,6 +24314,14 @@ var ikrpg = ikrpg || {};
       name:        "Temple Flameguard",
       publication: "Kings, Nations, and Gods",
       page:        "334",
+      category:    "Organization",
+      subcategory: "Military Organization",
+      game:        "FMF"
+    },
+    {
+      name:        "The Black 13th",
+      publication: "No Quarter #68",
+      page:        "9",
       category:    "Organization",
       subcategory: "Military Organization",
       game:        "FMF"
@@ -23386,6 +24491,14 @@ var ikrpg = ikrpg || {};
       name:        "Steelwater Surveying",
       publication: "No Quarter #46",
       page:        "63",
+      category:    "Organization",
+      subcategory: "Enterprise",
+      game:        "FMF"
+    },
+    {
+      name:        "The Tidehunter Kriel",
+      publication: "No Quarter #68",
+      page:        "98",
       category:    "Organization",
       subcategory: "Enterprise",
       game:        "FMF"
@@ -31190,6 +32303,14 @@ var ikrpg = ikrpg || {};
       subcategory: "Melee Weapon",
       game:        "FMF"
     },
+    {
+      name:        "Warhead Pike",
+      publication: "No Quarter #72",
+      page:        "106",
+      category:    "Steamjack",
+      subcategory: "Melee Weapon",
+      game:        "FMF"
+    },
     // ##### Steamjack > Ranged Weapon ##### \\
     {
       name:        "Avalanche Cannon",
@@ -31456,6 +32577,14 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Steamjack Torpedo Launcher",
+      publication: "No Quarter #72",
+      page:        "106",
+      category:    "Steamjack",
+      subcategory: "Ranged Weapon",
+      game:        "FMF"
+    },
+    {
       name:        "Storm Blaster (Light Steamjack Only)",
       publication: "Kings, Nations, and Gods",
       page:        "100",
@@ -31505,9 +32634,25 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Ambidexterity Upgrade",
+      publication: "No Quarter #72",
+      page:        "104",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
       name:        "Ammo Hopper",
       publication: "No Quarter #54",
       page:        "67",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Amphibious Operation",
+      publication: "No Quarter #72",
+      page:        "104",
       category:    "Steamjack",
       subcategory: "Gear/Upgrade",
       game:        "FMF"
@@ -31593,9 +32738,25 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Deckjack Conditioning Module",
+      publication: "No Quarter #72",
+      page:        "104",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
       name:        "Defensive Reflex Array (DRA)",
       publication: "Kings, Nations, and Gods",
       page:        "110",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Diving Lantern",
+      publication: "No Quarter #72",
+      page:        "107",
       category:    "Steamjack",
       subcategory: "Gear/Upgrade",
       game:        "FMF"
@@ -31668,6 +32829,14 @@ var ikrpg = ikrpg || {};
       name:        "Head Spike",
       publication: "No Quarter #54",
       page:        "68",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Heartfire Gill Extractor",
+      publication: "No Quarter #72",
+      page:        "105",
       category:    "Steamjack",
       subcategory: "Gear/Upgrade",
       game:        "FMF"
@@ -31753,6 +32922,46 @@ var ikrpg = ikrpg || {};
       game:        "FMF"
     },
     {
+      name:        "Reef Runner",
+      publication: "No Quarter #72",
+      page:        "105",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Retrieval Device",
+      publication: "No Quarter #72",
+      page:        "108",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Sharklure Rig",
+      publication: "No Quarter #72",
+      page:        "108",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Steamjack Armwinch",
+      publication: "No Quarter #72",
+      page:        "108",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Steamjack Snorkel",
+      publication: "No Quarter #72",
+      page:        "108",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
       name:        "Storm Accumulator",
       publication: "Kings, Nations, and Gods",
       page:        "111",
@@ -31764,6 +32973,14 @@ var ikrpg = ikrpg || {};
       name:        "Storm Relay",
       publication: "Kings, Nations, and Gods",
       page:        "111",
+      category:    "Steamjack",
+      subcategory: "Gear/Upgrade",
+      game:        "FMF"
+    },
+    {
+      name:        "Submerged Mobility Upgrade",
+      publication: "No Quarter #72",
+      page:        "105",
       category:    "Steamjack",
       subcategory: "Gear/Upgrade",
       game:        "FMF"
@@ -32086,6 +33303,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Freezing Fog",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
+    },
+    {
       name:        "Freezing Rain",
       publication: "Immortality",
       page:        "83",
@@ -32126,12 +33351,36 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Howling Winds",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
+    },
+    {
+      name:        "Ice Floe",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
+    },
+    {
       name:        "Ice Sheets",
       publication: "Unleashed Core Rules",
       page:        "229",
       category:    "Survival",
       subcategory: "Hazard",
       game:        "IKU"
+    },
+    {
+      name:        "Marine Snowstorm",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
     },
     {
       name:        "Marsh Gas",
@@ -32166,6 +33415,14 @@ var ikrpg = ikrpg || {};
       game:        "IKU"
     },
     {
+      name:        "Rime",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
+    },
+    {
       name:        "Scree",
       publication: "Unleashed Core Rules",
       page:        "228",
@@ -32180,6 +33437,14 @@ var ikrpg = ikrpg || {};
       category:    "Survival",
       subcategory: "Hazard",
       game:        "IKU"
+    },
+    {
+      name:        "Sleet",
+      publication: "No Quarter #68",
+      page:        "102",
+      category:    "Survival",
+      subcategory: "Hazard",
+      game:        "FMF"
     },
     {
       name:        "Snow Showers",

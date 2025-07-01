@@ -4,19 +4,19 @@
 var ikrpg = ikrpg || {};
 
 (function() {
-  
+
   ikrpg.generator = ikrpg.generator || {};
   var generator = ikrpg.generator;
-  
-  
+
+
   // # DBs # \\
   (function() {
-    
+
     ikrpg.generator.db = ikrpg.generator.db || {};
-    
+
     // ## Skill DB ## \\
     (function() {
-      
+
       var skillDB = {
         "Alchemy": ["INT"],
         "Animal Handling": ["SOC"],
@@ -75,14 +75,14 @@ var ikrpg = ikrpg || {};
         "Tracking": ["PER"],
         "Unarmed Combat": ["PRW"]
       };
-    
+
       ikrpg.generator.db.skill = skillDB;
-    
+
     })();
-    
+
     // ## Spell DB ## \\
     (function() {
-      
+
       var spellDB = { // { "cost": 2, "rng": 6, "aoe": "–", "pow": "–", "up": "NO", "off": "NO", "description": "" }
         "Abuse": { "cost": 2, "rng": 6, "aoe": "–", "pow": "–", "up": "NO", "off": "NO", "description": "" },
         "Admonition": { "cost": 2, "rng": 6, "aoe": "–", "pow": "–", "up": "YES", "off": "NO", "description": "" },
@@ -479,14 +479,14 @@ var ikrpg = ikrpg || {};
         "Winter Storm": { "cost": 3, "rng": "SELF", "aoe": "CTRL", "pow": "–", "up": "NO", "off": "NO", "description": "" },
         "Zephyr": { "cost": 3, "rng": 6, "aoe": "–", "pow": "–", "up": "NO", "off": "NO", "description": "" }
       };
-      
+
       ikrpg.generator.db.spell = spellDB;
-      
+
     })();
-    
+
     // ## Worn Armor DB [Done for Regular Armor] ## \\ TODO: Add Warcaster Armor etc.
     (function() {
-      
+
       var wornArmorDB = {
         "Alchemist's Leather": { "spd": 0, "def": -1, "arm": 5, "description": "" },
         "Armored Diving Suit": { "spd": 0, "def": -2, "arm": 7, "description": "stats for underwater" },
@@ -522,14 +522,14 @@ var ikrpg = ikrpg || {};
         "Vassal Armor": { "spd": 0, "def": -2, "arm": 7, "description": "" },
         "Winter Guard Armor": { "spd": 0, "def": -2, "arm": 7, "description": "" }
       };
-      
+
       ikrpg.generator.db.wornArmor = wornArmorDB;
-      
+
     })();
-    
+
     // ## Melee Weapon DB ## \\
     (function() {
-      
+
       var meleeWeaponDB = {
         "Ancestral Guardian Stone Weapon": { "skill": "Great Weapon", "mat-mod": 0, "pow": 7, "notes": "reach, no guardian: -3 at mod" },
         "Annihilator Blade": { "skill": "Great Weapon", "mat-mod": 0, "pow": 5, "notes": "reach" },
@@ -554,8 +554,10 @@ var ikrpg = ikrpg || {};
         "Blighted Blade": { "skill": "Hand Weapon", "mat-mod": 2, "pow": 3, "notes": "crit: no tough, p.92" },
         "Bloodtracker Fighting Claw": { "skill": "Hand Weapon", "mat-mod": -2, "pow": 3, "notes": "" },
         "Boarding Pike": { "skill": "Great Weapon", "mat-mod": 0, "pow": 5, "notes": "reach, enemy: -2 on charge" },
+        "Bone Saw": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 3, "notes": "Crit: next AT auto hit, +1 Medicine" },
         "Caspian Battleblade": { "skill": "Great Weapon", "mat-mod": 0, "pow": 6, "notes": "1-H: mat-mod -1, POW 4" },
         "Cat's Paw": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 2, "notes": "Crit: Knockout" },
+        "Cleaver": { "skill": "Hand Weapon", "mat-mod": -1, "pow": 3, "notes": "+2 to charge AT dmg" },
         "Cleft Spear": { "skill": "Great Weapon", "mat-mod": -2, "pow": 5, "notes": "reach, charge: +2 at rolls, Crit: 1 feat for +1 dmg die, 1-H: POW 4" },
         "Cleft Sword": { "skill": "Great Weapon", "mat-mod": -2, "pow": 6, "notes": "harge: +2 at rolls, Crit: 1 feat for +1 dmg die, 1-H: POW 5" },
         "Clockwork Injector": { "skill": "Hand Weapon", "mat-mod": -2, "pow": "–", "notes": "1 dmg, injection" },
@@ -644,14 +646,14 @@ var ikrpg = ikrpg || {};
         "Voltaic Halbert": { "skill": "Great Weapon", "mat-mod": 1, "pow": 6, "notes": "lightning arc to nearest character" },
         "War Hammer": { "skill": "Great Weapon", "mat-mod": -1, "pow": 5, "notes": "Crit: Knockout chance" }
       };
-      
+
       ikrpg.generator.db.meleeWeapon = meleeWeaponDB;
-      
+
     })();
-    
+
     // ## Ranged Weapon DB ## \\
     (function() {
-      
+
       var rangedWeaponDB = {
         "Arcus": { "rng": 8, "skill": "Crossbow", "pow": 12, "rat-mod": -2, "notes": "push", "ammo": "1" },
         "Assault Kommando Flamethrower": { "rng": 8, "skill": "Light Artillery", "pow": 12, "rat-mod": 0, "notes": "SP 8, -1 SPD and DEF, fire dmg, fire cont. eff.", "ammo": "10" },
@@ -694,6 +696,7 @@ var ikrpg = ikrpg || {};
         "Grenade, Smoke": { "rng": 8, "skill": "Thrown Weapon", "pow": "", "rat-mod": 0, "notes": "AOE 3", "ammo": "" },
         "Grenade, Strangle Gas": { "rng": 8, "skill": "Thrown Weapon", "pow": "", "rat-mod": 0, "notes": "AOE 3", "ammo": "" },
         "Gun Axe": { "rng": 8, "skill": "Rifle", "pow": 12, "rat-mod": -1, "notes": "", "ammo": "1" },
+        "Hand Arbalest": { "rng": 8, "skill": "Crossbow", "pow": 12, "rat-mod": -2, "notes": "pull, feat: melee AT", "ammo": "1" },
         "Hand Cannon": { "rng": 12, "skill": "Pistol", "pow": 12, "rat-mod": 0, "notes": "", "ammo": "1" },
         "Hand Cannon, Dual": { "rng": 12, "skill": "Pistol", "pow": 12, "rat-mod": 0, "notes": "", "ammo": "2" },
         "Harpoon Gun": { "rng": 10, "skill": "Rifle", "pow": 12, "rat-mod": -2, "notes": "", "ammo": "1" },
@@ -705,6 +708,7 @@ var ikrpg = ikrpg || {};
         "Linethrower": { "rng": 4, "skill": "Light Artillery", "pow": 10, "rat-mod": -2, "notes": 'pull 3"', "ammo": "1" },
         "Man-O-War Axe Cannon": { "rng": 8, "skill": "Light Artillery", "pow": 14, "rat-mod": -1, "notes": "", "ammo": "1" },
         "Man-O-War Shield Cannon": { "rng": 6, "skill": "Light Artillery", "pow": 14, "rat-mod": -1, "notes": "melee: at mod -1, POW 1", "ammo": "1" },
+        "Menoth's Rebuke": { "rng": 10, "skill": "Heavy Artillery", "pow": 14, "rat-mod": -2, "notes": "Spray, fire dmg, fire cont. eff.", "ammo": "6" },
         "Mini-Slugger": { "rng": 10, "skill": "Light Artillery", "pow": 11, "rat-mod": 0, "notes": "fired standing: at mod -1", "ammo": "30" },
         "Mortar": { "rng": 20, "skill": "Light Artillery", "pow": 16, "rat-mod": -4, "notes": 'AOE 4, -2 SPD and DEF, min rng 8"', "ammo": "1" },
         "Ogrun Battle Cannon": { "rng": 12, "skill": "Rifle", "pow": 12, "rat-mod": -1, "notes": "AOE 3, 1-H: RAT -2", "ammo": "1" },
@@ -734,6 +738,7 @@ var ikrpg = ikrpg || {};
         "Rynnish Walking Stick": { "rng": 8, "skill": "Rifle", "pow": 10, "rat-mod": 0, "notes": "1-H: RAT -2", "ammo": "1" },
         "Scattergun": { "rng": 8, "skill": "Rifle", "pow": 12, "rat-mod": 0, "notes": "SP8, 1-H: RAT -2", "ammo": "1" },
         "Skyhammer": { "rng": 16, "skill": "Light Artillery", "pow": 12, "rat-mod": -4, "notes": "AOE 3", "ammo": "1" },
+        "Skyhammer Deck Gun": { "rng": 16, "skill": "Heavy Artillery", "pow": 12, "rat-mod": -4, "notes": "AOE 3, all 1s: destoyed", "ammo": "3" },
         "Sling": { "rng": 10, "skill": "Thrown Weapon", "pow": 8, "rat-mod": -2, "notes": "", "ammo": "1" },
         "Slug Gun": { "rng": 4, "skill": "Pistol", "pow": 14, "rat-mod": -1, "notes": "1-H: RAT -2", "ammo": "1" },
         "Slugger": { "rng": 10, "skill": "Light Artillery", "pow": 13, "rat-mod": -1, "notes": "-2 SPD and DEF", "ammo": "30" },
@@ -744,14 +749,14 @@ var ikrpg = ikrpg || {};
         "Vislovski Carbine": { "rng": 10, "skill": "Rifle", "pow": 10, "rat-mod": 0, "notes": "", "ammo": "5" },
         "War Spear": { "rng": 8, "skill": "Thrown Weapon", "pow": 4, "rat-mod": 0, "notes": "melee: reach, Great Weapon", "ammo": "1" }
       };
-      
+
       ikrpg.generator.db.rangedWeapon = rangedWeaponDB;
-      
+
     })();
-    
-    // ## Benefits DB [all benefits, but only names] ## \\ 
+
+    // ## Benefits DB [all benefits, but only names] ## \\
     (function() {
-      
+
       var benefitsDB = { // { description: "" }
         "Additional Study": undefined,
         "Ambidextrous": undefined,
@@ -798,14 +803,14 @@ var ikrpg = ikrpg || {};
         "Virtuoso": undefined,
         "Warding Circle": undefined
       };
-      
+
       ikrpg.generator.db.benefit = benefitsDB;
-      
+
     })();
-    
-    // ## Abilities DB [all abilities, but only names] ## \\ 
+
+    // ## Abilities DB [all abilities, but only names] ## \\
     (function() {
-      
+
       //Max length = “The maximum description size!“ 29 chars
 
       var abilitiesDB = { // { description: "" }
@@ -818,7 +823,10 @@ var ikrpg = ikrpg || {};
         "Advance Move": undefined,
         "Advisor": undefined,
         "Aegis": undefined,
+        "Air of Legitimacy": undefined,
+        "Alias": undefined,
         "Always a Deal to be Made": undefined,
+        "Amateur Surgery": undefined,
         "Ambush": undefined,
         "Anatomical Precision": undefined,
         "Anatomist": undefined,
@@ -892,7 +900,9 @@ var ikrpg = ikrpg || {};
         "Bomber": undefined,
         "Bond": undefined,
         "Bone Grinder": undefined,
+        "Bonesetter": undefined,
         "Brawler": undefined,
+        "Break the Ice": undefined,
         "Brew Master": undefined,
         "Broad Stroke": undefined,
         "Brutal Trapper": undefined,
@@ -925,6 +935,7 @@ var ikrpg = ikrpg || {};
         "Conjoined": undefined,
         "Conniver": undefined,
         "Consume Essence": undefined,
+        "Cordeur": undefined,
         "Coven Leader": undefined,
         "Convergence Warcaster": undefined,
         "Corruptor": undefined,
@@ -942,6 +953,7 @@ var ikrpg = ikrpg || {};
         "Defender": undefined,
         "Defensive Line": undefined,
         "Demolished": undefined,
+        "Dervish": undefined,
         "Dhunia's Strike": undefined,
         "Dig In": undefined,
         "Disease Resistance": undefined,
@@ -1012,6 +1024,7 @@ var ikrpg = ikrpg || {};
         "Finisher": undefined,
         "Fire in the Hole!": undefined,
         "First to Fight": undefined,
+        "Fisherman": undefined,
         "Fist of God": undefined,
         "Flash Thief": undefined,
         "Fleet Foot": undefined,
@@ -1031,10 +1044,12 @@ var ikrpg = ikrpg || {};
         "Gift of the Beast": undefined,
         "Girded": undefined,
         "Go to Ground": undefined,
+        "Go with your Gut": undefined,
         "Goad": undefined,
         "Good Breeding": undefined,
         "Grappler": undefined,
         "Grave Man": undefined,
+        "Grease the Wheels": undefined,
         "Great Power": undefined,
         "Grenadier": undefined,
         "Gunfighter": undefined,
@@ -1068,6 +1083,7 @@ var ikrpg = ikrpg || {};
         "Improvised Formula": undefined,
         "In Plain Sight": undefined,
         "Inflict Pain": undefined,
+        "Information Network": undefined,
         "Inscribe Formulae": undefined,
         "Inscribe Thrall Rune": undefined,
         "Instructor": undefined,
@@ -1106,9 +1122,12 @@ var ikrpg = ikrpg || {};
         "Mounted: Counter Charge": undefined,
         "Mounted: Outride": undefined,
         "Natural Leader": undefined,
+        "Nautical Sabotage": undefined,
         "Necromancer": undefined,
         "Night Fighter": undefined,
+        "No I'm Fine": undefined,
         "Oath of Silence": undefined,
+        "Of the North": undefined,
         "Onslaught": undefined,
         "Opening Salvo": undefined,
         "Ossify": undefined,
@@ -1149,6 +1168,7 @@ var ikrpg = ikrpg || {};
         "Ram": undefined,
         "Remedy": undefined,
         "Renowned": undefined,
+        "Repel Boarders!": undefined,
         "Resonance: Devourer Warbeast": undefined,
         "Resonance: Farrow Warbeast": undefined,
         "Resonance: Skorne Warbeast": undefined,
@@ -1168,6 +1188,7 @@ var ikrpg = ikrpg || {};
         "Roll with It": undefined,
         "Runesmith": undefined,
         "Saddle Shot": undefined,
+        "Salvage Rights": undefined,
         "Sanguine Bond": undefined,
         "Savage Strike": undefined,
         "Scavenger": undefined,
@@ -1177,6 +1198,7 @@ var ikrpg = ikrpg || {};
         "Scrabble": undefined,
         "Scrapper": undefined,
         "Scrounge": undefined,
+        "Sea Hunter": undefined,
         "Self-Sacrifice": undefined,
         "Sentry": undefined,
         "Serenity": undefined,
@@ -1184,6 +1206,7 @@ var ikrpg = ikrpg || {};
         "Set Defence": undefined,
         "Shadow Magic": undefined,
         "Shadow Steel": undefined,
+        "Shanghai": undefined,
         "Share the Load": undefined,
         "Shield Guard": undefined,
         "Shield Slam": undefined,
@@ -1224,6 +1247,7 @@ var ikrpg = ikrpg || {};
         "Stone Warder": undefined,
         "Stone-and-Mortars Stance": undefined,
         "Stonecutter": undefined,
+        "Stopgap": undefined,
         "Storm Booster": undefined,
         "Storm of Leaves": undefined,
         "Strangler": undefined,
@@ -1285,29 +1309,29 @@ var ikrpg = ikrpg || {};
         "Wold Mastery": undefined,
         "Wolf Protector": undefined
       };
-      
+
       ikrpg.generator.db.ability = abilitiesDB;
-      
+
     })();
-    
+
     // ## Capacitor DB ## \\
     (function() {
-      
+
       var capacitorEntries = $.grep(ikrpg.index.data, function(entry) {
         return entry.category == "Mechanika" && entry.subcategory == "Capacitor";
       });
-      
+
       var names = $.map(capacitorEntries, function(capacitor) {
         return capacitor.name;
       });
-      
+
       ikrpg.generator.db.capacitor = names;
-      
+
     })();
-    
+
     // ## Runeplate DB [all runeplates, but only names] ## \\
     (function() {
-      
+
       var runplateDB = {
         "Accuracy": undefined,
         "Aegis": undefined,
@@ -1351,30 +1375,30 @@ var ikrpg = ikrpg || {};
         "Vitriol": undefined,
         "Whiplash": undefined
       };
-      
+
       ikrpg.generator.db.runeplate = runplateDB;
-      
+
     })();
-    
+
   })();
-  
-  
+
+
   // # Fill character sheet input fields with DB data # \\
   (function() {
-    
+
     // ## Spell changes ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.spell;
-      
+
       // ### Fill spell data on title change ### \\
       (function() {
-        
+
         $(".character-sheet .spell .title").change(function(event) {
           var input = $(event.target);
           var title = input.val();
           var spell = input.parent();
-        
+
           var spellData = db[title];
           if(spellData) {
             spell.find(".cost").val(spellData["cost"]);
@@ -1386,16 +1410,16 @@ var ikrpg = ikrpg || {};
             spell.find(".description").val(spellData["description"]);
           }
         });
-        
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = $.grep(Object.keys(db), function(key) {
           return db[key];
         });
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .title").autocomplete({
             appendTo: selector,
@@ -1407,48 +1431,48 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .spell").each(function(index, skill) {
           buildAutocomplete(".character-sheet #"+$(skill).attr("id"));
         });
       })();
-      
+
     })();
-    
+
     // ## Skill changes ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.skill;
-      
+
       // ### Fill skill data on title change ### \\
       (function() {
-        
+
         $(".character-sheet .skill .title").change(function(event) {
           var input = $(event.target);
           var title = input.val();
           var skill = input.parent();
-        
+
           var skillBaseName = title.replace(/(\(.*\))+/g, "").replace(/\s+$/, "");
-        
+
           var skillData = db[skillBaseName];
           if(skillData && skillData.length > 0) {
             var stat = skillData[0];
             var lowerStat = stat.toLowerCase();
-            
+
             var statValue = $(".character-sheet #"+lowerStat).val();
             if(statValue) {
               skill.find(".stat").val(lowerStat);
               skill.find(".base").val(statValue);
               skill.find(".lvl").val(0);
               skill.find(".sum").val(statValue);
-              
+
               if(skillData.length > 1) {
                 var stat = skillData[1];
                 var lowerStat = stat.toLowerCase();
-              
+
                 var statValue = $(".character-sheet #"+lowerStat).val();
                 if(statValue) {
-                
+
                   function findNextEmptySkill(currentSkill) {
                     var nextSkill = currentSkill.next(".skill");
                     if(nextSkill) {
@@ -1461,7 +1485,7 @@ var ikrpg = ikrpg || {};
                       return null;
                     }
                   }
-                
+
                   var nextEmptySkill = findNextEmptySkill(skill);
                   if(nextEmptySkill) {
                     nextEmptySkill.find(".title").val(title);
@@ -1480,12 +1504,12 @@ var ikrpg = ikrpg || {};
             }
           }
         });
-      
+
       })();
-      
+
       // ### Recompute sum on skill level change ### \\
       (function() {
-      
+
         $(".character-sheet .skill .lvl").change(function(event) {
           var input = $(event.target);
           var skill = input.parent();
@@ -1497,12 +1521,12 @@ var ikrpg = ikrpg || {};
             sum.trigger("change");
           }
         });
-      
+
       })();
-      
+
       // ### Recompute sum on parent set value change ### \\
       (function() {
-      
+
         $(".character-sheet .skill .base").change(function(event) {
           var input = $(event.target);
           var skill = input.parent();
@@ -1514,16 +1538,16 @@ var ikrpg = ikrpg || {};
             sum.trigger("change");
           }
         });
-      
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = $.grep(Object.keys(db), function(key) {
           return db[key];
         });
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .title").autocomplete({
             appendTo: selector,
@@ -1535,20 +1559,20 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .skill").each(function(index, skill) {
           buildAutocomplete(".character-sheet #"+$(skill).attr("id"));
         });
       })();
-      
+
     })();
-    
+
     // ## Stat changes ## \\
     (function() {
-      
+
       // ### Update skill parent set value on stat change ### \\
       (function() {
-      
+
         $(".character-sheet .stat").change(function(event) {
           var input = $(event.target);
           var stat = input.attr("id");
@@ -1559,12 +1583,12 @@ var ikrpg = ikrpg || {};
             base.trigger("change");
           });
         });
-      
+
       })();
-      
+
       // ### Update Willpower on PHY or INT change ### \\
       (function() {
-        
+
         $(".character-sheet #phy, .character-sheet #int").change(function(event) {
           var phyInput = $(".character-sheet #phy");
           var intInput = $(".character-sheet #int");
@@ -1574,35 +1598,35 @@ var ikrpg = ikrpg || {};
             $(".character-sheet #wil").val(phy + int);
           }
         });
-        
+
       })();
-      
+
       // ### Update SPD on computed SPD change ### \\
       (function() {
-        
+
         $(".character-sheet #computed-spd").change(function(event) {
           var input = $(event.target);
           var computedSpd = parseInt(input.val()) || 0;
           var spdMod = parseInt($(".character-sheet #wornarmor1 .spd").val()) || 0;
-          
+
           $(".character-sheet #spd").val(computedSpd - spdMod);
         });
-        
+
       })();
-      
+
       // ### Update computed SPD (on load) ### \\ HACK!
       (function() {
-        
+
         setTimeout(function() {
           $("#characters > tbody > tr > td:nth-of-type(5) > a").click(function(event) {
             event.preventDefault();
-          
+
             var a = $(event.target);
             var tr = a.parent().parent();
             var name = tr.find("td:nth-of-type(1)").text();
-          
+
             ikrpg.sheet.showCharacter(name);
-            
+
             setTimeout(function() { // HACK! (problem seems to be that pouch db is async loading)
               var spd = $(".character-sheet #spd").val() || 0;
               $(".character-sheet #computed-spd").val(spd);
@@ -1610,19 +1634,19 @@ var ikrpg = ikrpg || {};
           });
         }, 500);
       })();
-      
+
     })();
-    
+
     // ## Ability changes ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.ability;
-      
+
       // ### Update page value on ability change ### \\
       (function() {
-        
+
         var data = ikrpg.index.data;
-        
+
         $(".character-sheet .ability").change(function(event) {
           var input = $(event.target);
           var title = input.val();
@@ -1634,16 +1658,16 @@ var ikrpg = ikrpg || {};
             ability.find(".page").val(page);
           }
         });
-      
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var benefitDB = ikrpg.generator.db.benefit;
-        
+
         var source = $.merge(Object.keys(db), Object.keys(benefitDB));
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .title").autocomplete({
             appendTo: selector,
@@ -1655,56 +1679,56 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .ability").each(function(index, ability) {
           buildAutocomplete(".character-sheet #"+$(ability).attr("id"));
         });
       })();
-      
+
     })();
-    
+
     // ## Ranged Weapons ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.rangedWeapon;
-      
+
       // ### Update on name change ### \\
       (function() {
-        
+
         $(".character-sheet #rat1 .name, .character-sheet #rat2 .name").change(function(event) {
           var input = $(event.target);
           var title = input.val();
           var rangedWeapon = input.parent();
-          
+
           // remove previously remembered skill and rat mod
           rangedWeapon.find(".skill").val("");
           rangedWeapon.find(".ratmod").val("");
-          
+
           var rangedWeaponData = db[title];
-          
+
           if(rangedWeaponData) {
             rangedWeapon.find(".rng").val(rangedWeaponData["rng"]);
             rangedWeapon.find(".pow").val(rangedWeaponData["pow"]);
             rangedWeapon.find(".notes").val(rangedWeaponData["notes"]);
             rangedWeapon.find(".ammo").val(rangedWeaponData["ammo"]);
             rangedWeapon.find(".ratmod").val(rangedWeaponData["rat-mod"]);
-            
+
             var skillName = rangedWeaponData["skill"];
             var skills = $.grep($(".character-sheet .skill .title"), function(input) { return $(input).val() == skillName; });
-            
+
             var skillDB = ikrpg.generator.db.skill;
             var statNames = skillDB[skillName];
-            
+
             if(skills && skills.length > 0) {
               var skill = $(skills[0]);
               var lvl = parseInt(skill.parent().find(".lvl").val()) || 0;
-              
+
               if(statNames && statNames.length > 0) {
                 var statName = statNames[0].toLowerCase();
                 var stat = parseInt($(".character-sheet #"+statName).val()) || 0;
-                
+
                 var ratMod = parseInt(rangedWeaponData["rat-mod"]);
-                
+
                 rangedWeapon.find(".rat").val(stat + lvl + ratMod);
               } else {
                 rangedWeapon.find(".rat").val("");
@@ -1716,38 +1740,38 @@ var ikrpg = ikrpg || {};
             }
           }
         });
-        
+
       })();
-      
+
       // ### Update RAT on skill lvl or sum change ### \\
       (function() {
-        
+
         $(".character-sheet .skill .lvl, .character-sheet .skill .sum").change(function(event) {
           var input = $(event.target);
           var skill = input.parent();
           var title = skill.find(".title").val();
           var base = parseInt(skill.find(".base").val()) || 0;
           var lvl = parseInt(skill.find(".lvl").val()) || 0;
-          
+
           var rangedWeaponSkills = $(".character-sheet #rat1 .skill[value='"+title+"'], .character-sheet #rat2 .skill[value='"+title+"']");
-          
+
           rangedWeaponSkills.each(function(index, rangedWeaponSkill) {
             var rangedWeapon = $(rangedWeaponSkill).parent();
-            
+
             var ratMod = parseInt(rangedWeapon.find(".ratmod").val()) || 0;
             rangedWeapon.find(".rat").val(base + lvl + ratMod);
           });
         });
-        
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = $.grep(Object.keys(db), function(key) {
           return db[key];
         });
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .name").autocomplete({
             appendTo: selector,
@@ -1759,51 +1783,51 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         buildAutocomplete(".character-sheet #rat1");
         buildAutocomplete(".character-sheet #rat2");
       })();
-      
+
     })();
-    
+
     // ## Melee Weapons ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.meleeWeapon;
-      
+
       // ### Update on name change ### \\
       (function() {
-        
+
         $(".character-sheet #mat1 .name, .character-sheet #mat2 .name").change(function(event) {
           var input = $(event.target);
           var name = input.val();
           var meleeWeapon = input.parent();
-          
+
           // remove previously remembered skill, rat mod, and pow
           meleeWeapon.find(".skill").val("");
           meleeWeapon.find(".matmod").val("");
           meleeWeapon.find(".pow").val("");
-          
+
           var meleeWeaponData = db[name];
           if(meleeWeaponData) {
             meleeWeapon.find(".notes").val(meleeWeaponData["notes"]);
             meleeWeapon.find(".skill").val(meleeWeaponData["skill"]);
             meleeWeapon.find(".matmod").val(meleeWeaponData["mat-mod"]);
             meleeWeapon.find(".pow").val(meleeWeaponData["pow"]);
-            
+
             var skillName = meleeWeaponData["skill"];
             var skills = $.grep($(".character-sheet .skill .title"), function(input) { return $(input).val() == skillName; });
-            
+
             if(skills && skills.length > 0) {
               var skill = $(skills[0]).parent();
               var sum = parseInt(skill.find(".sum").val()) || 0;
               var matMod = parseInt(meleeWeaponData["mat-mod"]);
-              
+
               meleeWeapon.find(".mat").val(sum + matMod);
             } else {
               meleeWeapon.find(".mat").val("");
             }
-            
+
             var str = parseInt($(".character-sheet #str").val()) || 0;
             if(str || str == 0) {
               var pow = parseInt(meleeWeaponData["pow"]);
@@ -1813,38 +1837,38 @@ var ikrpg = ikrpg || {};
             }
           }
         });
-        
+
       })();
-      
+
       // ### Update MAT on skill lvl or sum change ### \\
       (function() {
-        
+
         $(".character-sheet .skill .lvl, .character-sheet .skill .sum").change(function(event) {
           var input = $(event.target);
           var skill = input.parent();
           var title = skill.find(".title").val();
           var base = parseInt(skill.find(".base").val()) || 0;
           var lvl = parseInt(skill.find(".lvl").val()) || 0;
-          
+
           var meleeWeaponSkills = $(".character-sheet #mat1 .skill[value='"+title+"'], .character-sheet #mat2 .skill[value='"+title+"']");
-          
+
           meleeWeaponSkills.each(function(index, meleeWeaponSkill) {
             var meleeWeapon = $(meleeWeaponSkill).parent();
-            
+
             var matMod = parseInt(meleeWeapon.find(".matmod").val()) || 0;
             meleeWeapon.find(".mat").val(base + lvl + matMod);
           });
         });
-        
+
       })();
-      
+
       // ### Update P+S on STR change ### \\
       (function() {
-        
+
         $(".character-sheet #str").change(function(event) {
           var input = $(event.target);
           var str = parseInt(input.val());
-          
+
           $(".character-sheet #mat1, .character-sheet #mat2").each(function(index, mat) {
             var name = $(mat).find(".name").val();
             if(name) {
@@ -1853,16 +1877,16 @@ var ikrpg = ikrpg || {};
             }
           });
         });
-        
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = $.grep(Object.keys(db), function(key) {
           return db[key];
         });
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .name").autocomplete({
             appendTo: selector,
@@ -1874,153 +1898,153 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         buildAutocomplete(".character-sheet #mat1");
         buildAutocomplete(".character-sheet #mat2");
       })();
-      
+
     })();
-    
+
     // ## Computed Values (DEF, ARM, INI, CMD) ## \\
     (function() {
-      
+
       // ### Update total DEF ### \\
       (function() {
-        
+
         $(".character-sheet #computed-spd, .character-sheet #agl, .character-sheet #per, .character-sheet #defracialmodifier, .character-sheet #defequipmentmodifiers").change(function() {
           var spd = parseInt($(".character-sheet #computed-spd").val()) || 0;
           var agl = parseInt($(".character-sheet #agl").val()) || 0;
           var per = parseInt($(".character-sheet #per").val()) || 0;
           var defracialmodifier = parseInt($(".character-sheet #defracialmodifier").val()) || 0;
           var defequipmentmodifiers = parseInt($(".character-sheet #defequipmentmodifiers").val()) || 0;
-          
+
           if((spd || spd == 0) && (agl || agl == 0) && (per || per == 0) && (defracialmodifier || defracialmodifier == 0) && (defequipmentmodifiers || defequipmentmodifiers == 0)) {
             $(".character-sheet #def").val(spd + agl + per + defracialmodifier + defequipmentmodifiers);
           }
         });
-        
+
       })();
-      
+
       // ### Update total ARM ### \\
       (function() {
-        
+
         $(".character-sheet #phy, .character-sheet #armshieldmodifier, .character-sheet #armarmormodifiers, .character-sheet #armothermodifiers").change(function() {
           var phy = parseInt($(".character-sheet #phy").val()) || 0;
           var armshieldmodifier = parseInt($(".character-sheet #armshieldmodifier").val()) || 0;
           var armarmormodifiers = parseInt($(".character-sheet #armarmormodifiers").val()) || 0;
           var armothermodifiers = parseInt($(".character-sheet #armothermodifiers").val()) || 0;
-                    
+
           if((phy || phy == 0) && (armshieldmodifier || armshieldmodifier == 0) && (armarmormodifiers || armarmormodifiers == 0) && (armothermodifiers || armothermodifiers == 0)) {
             $(".character-sheet #arm").val(phy + armshieldmodifier + armarmormodifiers + armothermodifiers);
           }
         });
-        
+
       })();
-      
+
       // ### Update ARM shield modifier on Shield skill change ### \\
       (function() {
-        
+
         $(".character-sheet .skill .lvl").change(function(event) {
           var input = $(event.target);
           var lvl = input.val();
           var skill = input.parent();
           var name = skill.find(".title").val();
-          
+
           if(name == "Shield") {
             var mod = $(".character-sheet #armshieldmodifier");
             mod.val(lvl);
             mod.trigger("change");
           }
         });
-        
+
       })();
-      
+
       // ### Update total INI ### \\
       (function() {
-        
+
         $(".character-sheet #computed-spd, .character-sheet #prw, .character-sheet #per, .character-sheet #iniequipmentmodifiers, .character-sheet #iniadditionalmodifiers").change(function() {
           var spd = parseInt($(".character-sheet #computed-spd").val()) || 0;
           var prw = parseInt($(".character-sheet #prw").val()) || 0;
           var per = parseInt($(".character-sheet #per").val()) || 0;
           var iniequipmentmodifiers = parseInt($(".character-sheet #iniequipmentmodifiers").val()) || 0;
           var iniadditionalmodifiers = parseInt($(".character-sheet #iniadditionalmodifiers").val()) || 0;
-          
+
           if((spd || spd == 0) && (prw || prw == 0) && (per || per == 0) && (iniequipmentmodifiers || iniequipmentmodifiers == 0) && (iniadditionalmodifiers || iniadditionalmodifiers == 0)) {
             $(".character-sheet #ini").val(spd + prw + per + iniequipmentmodifiers + iniadditionalmodifiers);
           }
         });
-        
+
       })();
-      
+
       // ### Update total CMD ### \\
       (function() {
-        
+
         $(".character-sheet #int, .character-sheet #cmdcommandskill, .character-sheet #cmdabilitymodifier").change(function() {
           var int = parseInt($(".character-sheet #int").val()) || 0;
           var cmdcommandskill = parseInt($(".character-sheet #cmdcommandskill").val()) || 0;
           var cmdabilitymodifier = parseInt($(".character-sheet #cmdabilitymodifier").val()) || 0;
-          
+
           if((int || int == 0) && (cmdcommandskill || cmdcommandskill == 0) && (cmdabilitymodifier || cmdabilitymodifier == 0)) {
             $(".character-sheet #cmd").val(int + cmdcommandskill + cmdabilitymodifier);
           }
         });
-        
+
       })();
-      
+
       // ### Update CMD command skill on Command skill change ### \\
       (function() {
-        
+
         $(".character-sheet .skill .lvl").change(function(event) {
           var input = $(event.target);
           var lvl = input.val();
           var skill = input.parent();
           var name = skill.find(".title").val();
-          
+
           if(name == "Command") {
             var mod = $(".character-sheet #cmdcommandskill");
             mod.val(lvl);
             mod.trigger("change");
           }
         });
-        
+
       })();
-      
+
     })();
-    
-    // ## Worn Armor changes ## \\ 
+
+    // ## Worn Armor changes ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.wornArmor;
-      
+
       // ### Name changes ### \\
       (function() {
-        
+
         $(".character-sheet .wornarmor .name").change(function(event) {
           var input = $(event.target);
           var name = input.val();
           var wornArmor = input.parent();
-          
+
           var wornArmorData = db[name];
           if(wornArmorData) {
             wornArmor.find(".description").val(wornArmorData["description"]);
             wornArmor.find(".spd").val(wornArmorData["spd"]);
             wornArmor.find(".def").val(wornArmorData["def"]);
             wornArmor.find(".arm").val(wornArmorData["arm"]);
-            
+
             wornArmor.find(".spd").trigger("change");
             wornArmor.find(".def").trigger("change");
             wornArmor.find(".arm").trigger("change");
           }
         });
-        
+
       })();
-      
+
       // ### wornarmor1 changes ### \\
       (function() {
-        
+
         // #### wornarmor1 SPD change #### \\
         (function() {
-          
+
           $(".character-sheet #wornarmor1 .spd").change(function(event) {
             var input = $(event.target);
             var spdMalus = input.val();
@@ -2028,15 +2052,15 @@ var ikrpg = ikrpg || {};
               spdMalus = 0;
             }
             var spd = parseInt($(".character-sheet #spd").val());
-            
+
             $(".character-sheet #computed-spd").val(spd + parseInt(spdMalus));
           });
-          
+
         })();
-        
+
         // #### wornarmor1 DEF change #### \\
         (function() {
-          
+
           $(".character-sheet #wornarmor1 .def").change(function(event) {
             var input = $(event.target);
             var defMalus = input.val();
@@ -2047,12 +2071,12 @@ var ikrpg = ikrpg || {};
             mods.val(defMalus);
             mods.trigger("change");
           });
-          
+
         })();
-        
+
         // #### wornarmor1 ARM change #### \\
         (function() {
-          
+
           $(".character-sheet #wornarmor1 .arm").change(function(event) {
             var input = $(event.target);
             var armBonus = input.val();
@@ -2063,18 +2087,18 @@ var ikrpg = ikrpg || {};
             mods.val(armBonus);
             mods.trigger("change");
           });
-          
+
         })();
-        
+
       })();
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = $.grep(Object.keys(db), function(key) {
           return db[key];
         });
-        
+
         function buildAutocomplete(selector) {
           $(selector + " .name").autocomplete({
             appendTo: selector,
@@ -2086,24 +2110,24 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .wornarmor").each(function(index, wornArmor) {
           buildAutocomplete(".character-sheet #"+$(wornArmor).attr("id"));
         });
       })();
-      
+
     })();
-    
+
     // ## Capacitor ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.capacitor;
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = db;
-        
+
         function buildAutocomplete(selector, clazz) {
           $(selector + " " + clazz).autocomplete({
             appendTo: selector,
@@ -2115,28 +2139,28 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .capacitor").each(function(index, capacitor) {
           buildAutocomplete(".character-sheet #"+$(capacitor).attr("id"), ".title");
         });
-        
+
         $(".character-sheet .mechanika").each(function(index, mechanika) {
           buildAutocomplete(".character-sheet #"+$(mechanika).attr("id"), ".capacitor");
         });
       })();
-      
+
     })();
-    
+
     // ## Runeplate ## \\
     (function() {
-      
+
       var db = ikrpg.generator.db.runeplate;
-      
+
       // ### Autocomplete ### \\
       (function() {
-        
+
         var source = Object.keys(db);
-        
+
         function buildAutocomplete(selector, clazz) {
           $(selector + " " + clazz).autocomplete({
             appendTo: selector,
@@ -2148,26 +2172,26 @@ var ikrpg = ikrpg || {};
             }
           });
         }
-        
+
         $(".character-sheet .runeplate").each(function(index, runeplate) {
           buildAutocomplete(".character-sheet #"+$(runeplate).attr("id"), ".title");
         });
-        
+
         $(".character-sheet .mechanika").each(function(index, mechanika) {
           buildAutocomplete(".character-sheet #"+$(mechanika).attr("id"), ".runeplate");
         });
       })();
-      
+
     })();
-    
+
   })();
-  
-  
+
+
   // # Character Generator Data DSL # \\
   (function() {
-    
+
     // ## Character Generator Control Structures ## \\
-  
+
     function HeroNumber(key, value) {
       this.key = key;
       this.value = value;
@@ -2177,7 +2201,7 @@ var ikrpg = ikrpg || {};
         str += '    <td>'+this.key+'</td>\n';
         str += '    <td><input class="'+this.key+'" type="number" data-type="number" min="'+this.value+'" max="'+this.value+'" value="'+this.value+'" disabled /></td>\n';
         str += '</tr>\n';
-      
+
         return str;
       };
     }
@@ -2195,7 +2219,7 @@ var ikrpg = ikrpg || {};
         str += '    <td>'+this.key+'</td>\n';
         str += '    <td><input class="'+this.key+'" type="number" data-type="number" min="'+this.min+'" max="'+this.max+'" value="'+this.min+'" /></td>\n';
         str += '</tr>\n';
-      
+
         return str;
       };
     }
@@ -2212,7 +2236,7 @@ var ikrpg = ikrpg || {};
         str += '    <td>'+this.key+'</td>\n';
         str += '    <td><input class="'+this.key+'" type="text" data-type="text" value="'+this.value+'" disabled /></td>\n';
         str += '</tr>\n';
-      
+
         return str;
       };
     }
@@ -2229,7 +2253,7 @@ var ikrpg = ikrpg || {};
         str += '    <td>'+this.key+'</td>\n';
         str += '    <td><input class="'+this.key+'" type="text" data-type="array" value="'+this.value+'" disabled /></td>\n';
         str += '</tr>\n';
-      
+
         return str;
       };
     }
@@ -2287,17 +2311,17 @@ var ikrpg = ikrpg || {};
         str += mkString($.map(pairs, function(pair) { return pair.html(); }), "\n        ", "", "\n");
         str += '    </select></td>\n';
         str += '</tr>\n';
-      
+
         return str;
       };
     }
     function choices(pairs, label) {
       return new HeroChoices(pairs, label);
     }
-  
-    
+
+
     // ## Character Generator Keywords ## \\
-  
+
     var _race = "race";
     var _PHY = "PHY";
     var _SPD = "SPD";
@@ -2336,10 +2360,10 @@ var ikrpg = ikrpg || {};
     var _melee_weapons = "melee weapons";
     var _armors = "armors";
     var _adventuring_company = "adventuring company";
-    
-    
+
+
     // ## Character Generator Data ## \\
-    
+
     var languages = [
       "Aeric",
       "Blaati",
@@ -2356,6 +2380,7 @@ var ikrpg = ikrpg || {};
       "Kossite",
       "Kworak",
       "Llaelese",
+      "Memaloose",
       "Molgur",
       "Molgur-Bog",
       "Molgur-Og",
@@ -2375,7 +2400,8 @@ var ikrpg = ikrpg || {};
       "Telgesh",
       "Thrallspeak",
       "Thurian",
-      "Umbrean"
+      "Umbrean",
+      "Zuese"
     ];
     var races = {
       "Blighted Ogrun": [
@@ -2451,8 +2477,7 @@ var ikrpg = ikrpg || {};
         range(_weight, 50, 90),
         listItem(_abilities, "Temperature Resistance"),
         listItem(_benefits, "Deft"),
-        number(_DEF_racial_modifier, 1),
-        listItem(_notes, "Gobbers cannot use great weapons or rifles")
+        number(_DEF_racial_modifier, 1)
       ],
       "Croak": [
         string(_race, "Croak"),
@@ -3149,6 +3174,41 @@ var ikrpg = ikrpg || {};
         listItem(_military_skills, "Unarmed Combat"),
         list(_occupational_skills, ["Detection", "Jumping", "Sneak"])
       ],
+      "Angler": [
+        listItem(_notes, "If you choose Angler do not choose a second career!"),
+        listItem(_careers, "Angler"),
+        list(_abilities, ["Camouflage", "Fisherman", "Sea Hunter", "Take Down"]),
+        choices(arrayPairs(_abilities, [
+          "Specialization (Harpoon Gun)",
+          "Specialization (Bomb Lance)"]), "Choose 1"),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Crossbow",
+          "Hand Weapon",
+          "Pistol",
+          "Rifle",
+          "Unarmed Combat"]), "Choose 2"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Pistol",
+          "Rifle"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Detection",
+          "Detection",
+          "Rope Use",
+          "Survival",
+          "Swimming",
+          "Swimming",
+          "Tracking",
+          "Tracking"]),
+        choices([
+          arrayPair(_ranged_weapons, "Harpoon Gun"),
+          arrayPair(_gear, "12 harpoons"),
+          arrayPair(_ranged_weapons, "Bomb Lance"),
+          arrayPair(_gear, "8 bombs")], "Choose either<br />harpoons and gun<br />or bombs and lance"),
+        number(_gold, 45)
+      ],
       "Arcane Mechanik": [
         listItem(_careers, "Arcane Mechanik"),
         listItem(_abilities, "Inscribe Formulae"),
@@ -3402,7 +3462,7 @@ var ikrpg = ikrpg || {};
         list(_melee_weapons, ["Axe", "Sacral Blade"]),
         listItem(_armors, "Tharn Leathers"),
         number(_gold, 25),
-        list(_gear, ["apothecary kit", "skinning tools", "bone grinder fetish (any)"])
+        list(_gear, ["apothecary's kit", "skinning tools", "bone grinder fetish (any)"])
       ],
       "Bokor": [
         listItem(_careers, "Bokor"),
@@ -3432,7 +3492,7 @@ var ikrpg = ikrpg || {};
           "Medicine"]),
         list(_spells, ["Arcane Bonds", "Marked for Death"]),
         number(_gold, 25),
-        list(_gear, ["apothecary kit", "skinning tools", "bone grinder fetish (any)"])
+        list(_gear, ["apothecary's kit", "skinning tools", "bone grinder fetish (any)"])
       ],
       "Bounty Hunter": [
         listItem(_careers, "Bounty Hunter"),
@@ -3471,6 +3531,24 @@ var ikrpg = ikrpg || {};
           "Sneak"]),
         number(_gold, 75)
       ],
+      "Buccaneer": [
+        listItem(_notes, "If you choose Buccaneer do not choose a second career!"),
+        listItem(_careers, "Buccaneer"),
+        list(_abilities, [
+          "Ambush",
+          "Anatomical Precision",
+          "Assault",
+          "Backstab",
+          "Defensive Line"]),
+        listItem(_military_skills, "Great Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Hand Weapon",
+          "Hand Weapon",
+          "Pistol",
+          "Pistol" ]), "Choose either both<br />Hand Weapon or Pistol"),
+        list(_occupational_skills, ["Command", "Detection", "Intimidation", "Sneak", "Streetwise"]),
+        number(_gold, 175)
+      ],
       "Bushwhacker": [
         listItem(_careers, "Bushwhacker"),
         list(_abilities, ["Crackshot", "Fast Reload"]),
@@ -3482,7 +3560,7 @@ var ikrpg = ikrpg || {};
           "Survival"]),
         number(_gold, 50),
         list(_gear, ["ammo bandolier", "powder and ammunition for 10 shots"]),
-        choices(arrayPairs(_melee_weapons, [
+        choices(arrayPairs(_ranged_weapons, [
           "Rifle, Heavy",
           "Rifle, Repeating"]), "Choose 1")
       ],
@@ -3700,6 +3778,39 @@ var ikrpg = ikrpg || {};
         list(_military_skills, ["Hand Weapon", "Pistol"]),
         list(_occupational_skills, ["Gambling", "Intimidation", "Jumping"]),
         number(_gold, 75)
+      ],
+      "Errant Marine": [
+        listItem(_notes, "If you choose Errant Marine do not choose a second career!"),
+        listItem(_careers, "Errant Marine"),
+        list(_abilities, ["Aegis", "Boarding Action", "Sanguine Bond"]),
+        choices(arrayPairs(_abilities, [
+          "Specialization (Lawbringer Crossbow)",
+          "Specialization (Hand Arbalest)"]), "Choose 1"),
+        choices(arrayPairs(_abilities, [
+          "Specialization (Cutlass)",
+          "Specialization (Gaff Spear)"]), "Choose 1"),
+        listItem(_connections, "Exemplar Order"),
+        list(_military_skills, [
+          "Crossbow",
+          "Hand Weapon",
+          "Hand Weapon",
+          "Shield"]),
+        list(_occupational_skills, [
+          "Command",
+          "Detection",
+          "Jumping",
+          "Lore (Menite Faith)",
+          "Medicine",
+          "Sailing",
+          "Swimming"]),
+        listItem(_armors, "Exemplar Plate"),
+        choices([
+          arrayPair(_ranged_weapons, "Crossbow, Lawbringer"),
+          arrayPair(_gear, "ten blessed bolts"),
+          arrayPair(_ranged_weapons, "Hand Arbalest")
+        ], "Choose either Hand Arbalest or<br />Crossbow and Bolts"),
+        list(_melee_weapons, ["Shield", "Sword"]),
+        number(_gold, 100)
       ],
       "Exemplar": [
         listItem(_careers, "Exemplar"),
@@ -4064,6 +4175,41 @@ var ikrpg = ikrpg || {};
           "Tracking"]),
         number(_gold, 100)
       ],
+      "Ice Master": [
+        listItem(_careers, "Ice Master"),
+        list(_abilities, ["Break the Ice", "Of the North", "Pathfinder", "Specialization (Ice Axe)"]),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Pistol",
+          "Rifle"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Detection",
+          "Sailing",
+          "Survival",
+          "Tracking"]),
+        listItem(_melee_weapons, "Ice Axe"),
+        listItem(_ranged_weapons, "Scattergun"),
+        listItem(_gear, "10 scattergun shots"),
+        choices([
+          arrayPair(_armors, "Winter Guard Armor"),
+          arrayPair(_gear, "Winter Cloak")], "Choose 1"),
+      ],
+      "Idrian Corsair": [
+        listItem(_careers, "Idrian Corsair"),
+        list(_abilities, ["Gang", "Steady", "Specialization (Kopis)"]),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Pistol",
+          "Thrown Weapon"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Climbing",
+          "Intimidation",
+          "Sailing",
+          "Swimming"]),
+        number(_gold, 75)
+      ],
       "Illuminated Arcanist": [
         listItem(_careers, "Illuminated Arcanist"),
         listItem(_abilities, "Great Power"),
@@ -4330,6 +4476,22 @@ var ikrpg = ikrpg || {};
         listItem(_benefits, "Rune Reader"),
         number(_gold, 75)
       ],
+      "Merchant Trader": [
+        listItem(_careers, "Merchant Trader"),
+        list(_abilities, ["Air of Legitimacy", "Counter Offer", "Grease the Wheels"]),
+        choices(arrayPairs(_languages, languages), "Choose 1"),
+        choices(arrayPairs(_connections, [
+          "Merchant Guild",
+          "Trading House"]), "Choose 1"),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Pistol",
+          "Rifle"]), "Choose 1"),
+        list(_occupational_skills, ["Command", "Etiquette"]),
+        listItem(_notes, "20gc each month from his merchant house"),
+        number(_gold, 200)
+      ],
       "Military Officer": [
         listItem(_careers, "Military Officer"),
         list(_abilities, [
@@ -4513,6 +4675,24 @@ var ikrpg = ikrpg || {};
           arrayPair(_melee_weapons, "Pike"),
           arrayPair(_melee_weapons, "Sword, Praetorian"),
           arrayPair(_melee_weapons, "Sword, Praetorian") ], "Choose Toboresh,<br />Shield and Pike, or<br />both Praetorian Swords")
+      ],
+      "Press Ganger": [
+        listItem(_careers, "Press Ganger"),
+        list(_abilities, ["Binding", "Shanghai", "Take Down"]),
+        choices(arrayPairs(_military_skills, [
+          "Hand Weapon",
+          "Pistol",
+          "Unarmed Combat"]), "Choose 2"),
+        list(_occupational_skills, [
+          "Detection",
+          "Intimidation",
+          "Rope Use",
+          "Tracking"]),
+        number(_gold, 35),
+        listItem(_melee_weapons, "Club"),
+        choices(arrayPairs(_gear, [
+          "Rope",
+          "Manacles"]), "Choose 1")
       ],
       "Priest of Cyriss": [
         listItem(_careers, "Priest of Cyriss"),
@@ -4776,6 +4956,22 @@ var ikrpg = ikrpg || {};
         listItem(_melee_weapons, "Nyss Great Sword"),
         listItem(_armors, "Ryssovass Plate")
       ],
+      "Sawbones": [
+        listItem(_careers, "Sawbones"),
+        list(_abilities, ["Amateur Surgery", "Anatomist"]),
+        choices(arrayPairs(_abilities, [
+          "Specialization (Bonesaw)",
+          "Specialization (Cleaver)"]), "Choose 1"),
+        listItem(_military_skills, "Hand Weapon"),
+        list(_occupational_skills, [
+          "Medicine",
+          "Survival"]),
+        choices(arrayPairs(_melee_weapons, [
+          "Bonesaw",
+          "Cleaver"]), "Choose 1"),
+        number(_gold, 50),
+        listItem(_gear, "field medicine kit")
+      ],
       "Scout": [
         listItem(_careers, "Scout"),
         list(_abilities, ["Pathfinder", "Survivalist"]),
@@ -4809,6 +5005,54 @@ var ikrpg = ikrpg || {};
         list(_spells, ["Chasten", "Influence"]),
         number(_gold, 100),
         list(_gear, ["Scrutator's Masked Helm", "Wrack"])
+      ],
+      "Sea Sorcerer (Fire)": [
+        listItem(_careers, "Sorcerer (Fire)"),
+        list(_abilities, ["Amphibious", "Immunity: Fire"]),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Hand Weapon"]), "Choose 1"),
+        list(_occupational_skills, ["Sailing", "Survival", "Swimming"]),
+        list(_spells, ["Buoyancy", "Sea Legs", "Twister"]),
+        number(_gold, 75)
+      ],
+      "Sea Sorcerer (Ice)": [
+        listItem(_careers, "Sorcerer (Ice)"),
+        list(_abilities, ["Amphibious", "Immunity: Cold"]),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Hand Weapon"]), "Choose 1"),
+        list(_occupational_skills, ["Sailing", "Survival", "Swimming"]),
+        list(_spells, ["Buoyancy", "Sea Legs", "Twister"]),
+        number(_gold, 75)
+      ],
+      "Sea Sorcerer (Stone)": [
+        listItem(_careers, "Sorcerer (Stone)"),
+        number(_PHY, 1),
+        number(_PHY_max, 1),
+        listItem(_abilities, "Amphibious"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Hand Weapon"]), "Choose 1"),
+        list(_occupational_skills, ["Sailing", "Survival", "Swimming"]),
+        list(_spells, ["Buoyancy", "Sea Legs", "Twister"]),
+        number(_gold, 75)
+      ],
+      "Sea Sorcerer (Storm)": [
+        listItem(_careers, "Sorcerer (Storm)"),
+        number(_SPD, 1),
+        number(_SPD_max, 1),
+        listItem(_abilities, "Amphibious"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Hand Weapon"]), "Choose 1"),
+        list(_occupational_skills, ["Sailing", "Survival", "Swimming"]),
+        list(_spells, ["Buoyancy", "Sea Legs", "Twister"]),
+        number(_gold, 75)
       ],
       "Searforge Trader": [
         listItem(_careers, "Searforge Trader"),
@@ -4906,7 +5150,7 @@ var ikrpg = ikrpg || {};
         listItem(_melee_weapons, "Halbert"),
         listItem(_armors, "Full Plate")
       ],
-      "Smuggler": [
+      "Smuggler": [ // see http://privateerpressforums.com/showthread.php?258272#post3631032 for errata
         listItem(_careers, "Smuggler"),
         list(_abilities, ["Conniver", "In Plain Sight", "Port of Call"]),
         choices(arrayPairs(_connections, [
@@ -4917,6 +5161,7 @@ var ikrpg = ikrpg || {};
           "Thrown Weapon"]), "Choose 1"),
         list(_occupational_skills, [
           "Bribery",
+          "Deception",
           "Deception",
           "Lock Picking",
           "Lock Picking",
@@ -5071,7 +5316,7 @@ var ikrpg = ikrpg || {};
       ],
       "Swamp Gobber Raider": [
         listItem(_careers, "Swamp Gobber Raider"),
-        list(_abilities, ["Ambush", "Cover"]),
+        list(_abilities, ["Ambush", "Gunfighter"]),
         choices(arrayPairs(_connections, [
           "Criminal Gang",
           "Character's Tribe"]), "Choose 1"),
@@ -5097,7 +5342,7 @@ var ikrpg = ikrpg || {};
       "Tempest Blazer": [
         listItem(_notes,
           "If you choose Tempest Blazer do not choose a second career!"),
-        
+
         listItem(_careers, "Tempest Blazer"),
         list(_abilities, [
           "Craft Rune Shot",
@@ -5234,6 +5479,25 @@ var ikrpg = ikrpg || {};
           "Survival"]),
         number(_gold, 75)
       ],
+      "Treasure Hunter": [
+        listItem(_careers, "Treasure Hunter"),
+        list(_abilities, ["Port of Call", "Salvage Rights"]),
+        choices(arrayPairs(_languages, languages), "Choose 1"),
+        listItem(_connections, "patron"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Hand Weapon",
+          "Pistol",
+          "Rifle"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Detection",
+          "Lore (shipwreck)",
+          "Navigation",
+          "Survival"]),
+        listItem(_notes, "20gc each month from a patron"),
+        number(_gold, 150),
+        list(_gear, ["map case", "spyglass"])
+      ],
       "Trencher": [
         listItem(_careers, "Trencher"),
         listItem(_notes, "Must choose between Military Officer, Ranger, Rifleman, Soldier, or Warcaster for second career"),
@@ -5319,6 +5583,27 @@ var ikrpg = ikrpg || {};
         listItem(_benefits, "Preternatural Awareness"),
         listItem(_melee_weapons, "Nyss Claymore"),
         listItem(_ranged_weapons, "Bow, Nyss")
+      ],
+      "Vagabond": [
+        listItem(_careers, "Vagabond"),
+        list(_abilities, ["Ambush", "Nautical Sabotage", "Sprint"]),
+        listItem(_military_skills, "Hand Weapon"),
+        choices(arrayPairs(_military_skills, [
+          "Archery",
+          "Crossbow",
+          "Pistol"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Detection",
+          "Intimidation",
+          "Rope Use",
+          "Sailing",
+          "Survival"]),
+        number(_gold, 50),
+        listItem(_gear, "mask"),
+        choices([
+          arrayPair(_melee_weapons, "Pistol"),
+          arrayPair(_ranged_weapons, "Sword")], "Choose 1"),
+        listItem(_gear, "Small Sailing Raft")
       ],
       "Vassal of Menoth": [
         listItem(_careers, "Vassal of Menoth"),
@@ -5508,6 +5793,27 @@ var ikrpg = ikrpg || {};
           "Detection",
           "Gambling",
           "Riding"]),
+        number(_gold, 100)
+      ],
+      "Watch Inspector": [
+        listItem(_careers, "Watch Inspector"),
+        list(_abilities, [ "Alias", "Go with your Gut" ]),
+        choices(arrayPairs(_military_skills, [
+          "Hand Weapon",
+          "Pistol"]), "Choose 1"),
+        list(_occupational_skills, [
+          "Detection",
+          "Disguise",
+          "Forensic Science",
+          "Interrogation",
+          "Law",
+          "Medicine",
+          "Sneak"]),
+        listItem(_benefits, "Hyper Perception"),
+        listItem(_armors, "Armored Greatcoat"),
+        listItem(_melee_weapons, "Cutlass"),
+        listItem(_ranged_weapons, "Pistol"),
+        listItem(_gear, "Watch Inspector's badge"),
         number(_gold, 100)
       ],
       "Wolf of Orboros": [
@@ -5732,6 +6038,29 @@ var ikrpg = ikrpg || {};
             "Mechanikal Engineering",
             "Research"]), "Choose 1 if not leader")
       ],
+      "Four Star Syndicate (Dark Dealings)": [
+        listItem(_notes, "Four Star Syndicate (Dark Dealings)"),
+        listItem(_connections, "Ordic Navy"),
+        listItem(_occupational_skills, "Lore (Ordic Navy)")
+      ],
+      "Four Star Syndicate (King's Favor)": [
+        listItem(_notes, "Four Star Syndicate (King's Favor)"),
+        choices(arrayPairs(_connections, [
+          "Sharde Pirate",
+          "Cryxian Agents"
+        ]), "Choose one"),
+        listItem(_occupational_skills, "Lore (Cryx)")
+      ],
+      "Four Star Syndicate (High Society)": [
+        listItem(_notes, "Four Star Syndicate (High Society)"),
+        listItem(_connections, "Nobility"),
+        listItem(_occupational_skills, "Lore (Thamarite)")
+      ],
+      "Four Star Syndicate (Mateau Enforcers)": [
+        listItem(_notes, "Four Star Syndicate (Mateau Enforcers)"),
+        listItem(_connections, "Mateau Traders"),
+        listItem(_notes, "Can sell plundered Mercarian goods for double amount")
+      ],
       "Gatorman Tribe": [
         listItem(_notes, "Adventuring Company: Gatorman Tribe"),
         list(_notes, [
@@ -5813,6 +6142,22 @@ var ikrpg = ikrpg || {};
           "Field Mechaniks can begin with a Kolstot laborjack with up to 200 gc in weapons"]),
         choices([ arrayPair(_abilities, "Natural Leader") ], "Choose if lieutenant")
       ],
+      "Khadoran Royal Navy": [
+        listItem(_notes, "Adventuring Company: Khadoran Royal Navy"),
+        list(_notes, [
+          "All characters must either be an Artillerist, Buccaneer, Explorer, Marine, Military Officer, Press Ganger, Sawbones, or Smuggler.",
+          "One character must have Military Officer career",
+          "One Military Officer is the captain",
+          "One member is a first mate",
+          "Characters begin game with a large ship and supplies",
+          "Each character gains 25gc in pay each month"
+        ]),
+        list(_occupational_skills, [
+          "Climbing",
+          "Rope Use",
+          "Sailing",
+          "Swimming" ])
+      ],
       "Korsk Stanzynat Mustyn": [
         listItem(_notes, "Adventuring Company: Korsk Stanzynat Mustyn"),
         list(_notes, [
@@ -5856,6 +6201,19 @@ var ikrpg = ikrpg || {};
           arrayPair(_benefits, "Occult Secrets") ], "Choose if Gifted"),
         choices([
           arrayPair(_abilities, "Shield Guard") ], "Choose if not Gifted")
+      ],
+      "Mateau Traders": [
+        listItem(_notes, "Adventuring Company: Mateau Traders"),
+        list(_notes, [
+          "All characters must either be an Buccaneer, Explorer, Marine, Press Ganger, Sawbones, Smuggler, or Spy.",
+          "One character is the captain",
+          "Characters begin game with a ship and supplies"
+        ]),
+        list(_occupational_skills, [
+          "Climbing",
+          "Rope Use",
+          "Sailing",
+          "Swimming" ])
       ],
       "Nobile Exiles": [
         listItem(_notes, "Adventuring Company: Nobile Exiles"),
@@ -5939,6 +6297,19 @@ var ikrpg = ikrpg || {};
           "Streetwise",
           "Survival"]), "Choose 1")
       ],
+      "Riverboat Raiders": [
+        listItem(_notes, "Adventuring Company: Riverboat Raiders"),
+        list(_notes, [
+          "All characters must either be an Archer, Brigand, Buccaneer, Explorer, Marine, Sawbones, or Smuggler.",
+          "Characters begin the game with one or two small river boats",
+          "Characters begin the game with a small encampment near the river",
+        ]),
+        list(_occupational_skills, [
+          "Climbing",
+          "Rope Use",
+          "Sailing",
+          "Swimming" ])
+      ],
       "Renegades": [
         listItem(_notes, "Adventuring Company: Renegades"),
         listItem(_notes, "One is the leader"),
@@ -5955,6 +6326,18 @@ var ikrpg = ikrpg || {};
           arrayPairs(_military_skills, [ "Thrown Weapon" ]),
           arrayPairs(_occupational_skills, [ "Mechanikal Engineering" ])
           ), "Choose 1")
+      ],
+      "Seahunters": [
+        listItem(_notes, "Adventuring Company: Seahunters"),
+        list(_notes, [
+          "All characters must either be an Angler, Buccaneer, Explorer, Pirate, or Sawbones.",
+          "Characters begin the game with a small ship and special gear"
+        ]),
+        list(_occupational_skills, [
+          "Climbing",
+          "Rope Use",
+          "Sailing",
+          "Swimming" ])
       ],
       "Sleeper Cell": [
         listItem(_notes, "Adventuring Company: Sleeper Cell"),
@@ -6094,7 +6477,7 @@ var ikrpg = ikrpg || {};
           "One member is the lieutenant",
           "The characters can expect to be resupplied with ammunition, grenates, and alchemical accumulators"]),
         choices([arrayPair(_abilities, "Natural Leader")], "For the lieutenant"),
-        listItem(_abilities, "Find Cover")  
+        listItem(_abilities, "Find Cover")
       ],
       "Wilderness Expedition": [
         listItem(_notes, "Adventuring Company: Wilderness Expedition"),
@@ -6129,23 +6512,23 @@ var ikrpg = ikrpg || {};
           "Tracking"]), "Choose 1")
       ]
     };
-    
-    
+
+
     // ## Character Generator Variables ## \\
-    
+
     generator.races = races;
     generator.castes = castes;
     generator.archetypes = archetypes;
     generator.careers = careers;
     generator.characterBackgrounds = characterBackgrounds;
     generator.adventuringCompanies = adventuringCompanies;
-    
+
   })();
-  
-  
+
+
   // # Add Option Tags to Character Generator Select Tags # \\
   (function() {
-    
+
     function addOption(selector) {
       return function(key, value) {
         if(value.length > 0) {
@@ -6154,23 +6537,23 @@ var ikrpg = ikrpg || {};
         }
       }
     }
-    
+
     $.each(ikrpg.generator.races, addOption("#race-select"));
     $.each(ikrpg.generator.castes, addOption("#caste-select"));
     $.each(ikrpg.generator.archetypes, addOption("#archetype-select"));
     $.each(ikrpg.generator.characterBackgrounds, addOption("#character-background-select"));
-    
-    
+
+
     var index = ikrpg.index.data;
-    
+
     function addOptionsGroupedByPublication(selector, data, publications, category, subcategories) {
-      
+
       var groups = { "Other Publications": [] };
-      
+
       $.each(publications, function(i, publication) {
         groups[publication] = [];
       });
-      
+
       $.each(index, function(i, entry) {
         if(entry.category == category && $.inArray(entry.subcategory, subcategories) > -1 && data.hasOwnProperty(entry.name)) {
           if(groups.hasOwnProperty(entry.publication)) {
@@ -6180,9 +6563,9 @@ var ikrpg = ikrpg || {};
           }
         }
       });
-            
+
       var html = "";
-      
+
       $.each($.merge(publications, ["Other Publications"]), function(i, publication) {
         if(groups[publication]) {
           html += '\n<optgroup label="'+publication+':">';
@@ -6192,11 +6575,11 @@ var ikrpg = ikrpg || {};
           html += '\n</optgroup>';
         }
       });
-      
+
       var old = $(selector).html();
       $(selector).html(old + html);
     }
-    
+
     addOptionsGroupedByPublication(
       "#adventuring-company-select",
       ikrpg.generator.adventuringCompanies,
@@ -6218,13 +6601,13 @@ var ikrpg = ikrpg || {};
       "Character Creation",
       ["Career", "Career Option"]
     );
-      
+
   })();
-  
-  
+
+
   function mkString(array, between, before, after) {
     var str = "";
-    
+
     if(before) str += before;
     if(array.length > 0) {
       str += array.slice(0, 1);
@@ -6234,14 +6617,14 @@ var ikrpg = ikrpg || {};
       });
     }
     if(after) str += after;
-    
+
     return str;
   }
-  
-  
+
+
   // # Read in Choices from input and select tags and fill out character sheet # \\
   (function() {
-    
+
     function hero() {
       return {
         "race": "",
@@ -6273,14 +6656,14 @@ var ikrpg = ikrpg || {};
         "armors": []
       };
     }
-    
+
     // ## Fill out values on Select box change ## \\
     (function() {
-      
+
       function lookupAndFillOut(selectSelector, dataSelector, data) {
         return function(event) {
           $(dataSelector).html("");
-        
+
           var option = $(selectSelector).val();
           if(data[option]) {
             var stuff = data[option];
@@ -6294,7 +6677,7 @@ var ikrpg = ikrpg || {};
           }
         };
       }
-    
+
       $("#race-select").change(lookupAndFillOut("#race-select", "#race-data", ikrpg.generator.races));
       $("#caste-select").change(lookupAndFillOut("#caste-select", "#caste-data", ikrpg.generator.castes));
       $("#archetype-select").change(lookupAndFillOut("#archetype-select", "#archetype-data", ikrpg.generator.archetypes));
@@ -6302,9 +6685,9 @@ var ikrpg = ikrpg || {};
       $("#career2-select").change(lookupAndFillOut("#career2-select", "#career2-data", ikrpg.generator.careers));
       $("#character-background-select").change(lookupAndFillOut("#character-background-select", "#character-background-data", ikrpg.generator.characterBackgrounds));
       $("#adventuring-company-select").change(lookupAndFillOut("#adventuring-company-select", "#adventuring-company-data", ikrpg.generator.adventuringCompanies));
-            
+
     })();
-    
+
     function histogram(array) {
       var o = {};
       $.each(array, function(index, item) {
@@ -6313,25 +6696,25 @@ var ikrpg = ikrpg || {};
       });
       return o;
     }
-    
+
     // ## Read user choices from html and fill out character sheet ## \\
     (function() {
-      
+
       function fillCharacterSheet() {
         ikrpg.cards.cleanData();
         ikrpg.cards.data["hero-name"] = "Hero's name";
-        
+
         var data = hero();
-        
+
         // ### Read in data from generator user input tags ### \\
         (function() {
-          
+
           $(".character-generator-data input, .character-generator-data option:selected").each(function(index, entry) {
             var elem = $(entry);
             var clazz = elem.attr("class");
             var value = elem.val();
             var type = elem.attr("data-type");
-            
+
             switch(type) {
               case "number":
                 if(!data[clazz]) data[clazz] = parseInt(value);
@@ -6345,9 +6728,9 @@ var ikrpg = ikrpg || {};
                 data[clazz] = value;
             }
           });
-          
+
         })();
-        
+
         var character = {
           "weight": data["weight"],
           "archetype": data["archetype"],
@@ -6380,23 +6763,23 @@ var ikrpg = ikrpg || {};
           "xp": 0,
           "feats": 3
         };
-        
+
         // ### Fill character based on read in data ### \\
         (function() {
-          
+
           // #### Abilities #### \\
           (function() {
-            
+
             var abilities = $.merge(data["benefits"], data["abilities"]) || [];
-            
+
             $.each(abilities.sort(), function(index, ability) {
               var identifier = "ability"+(index+1);
-              
+
               character[identifier] = character[identifier] || { "title": "", "description": "", "page": "" };
               character[identifier]["title"] = ability;
-              
+
               var db = ikrpg.index.data;
-              
+
               var abilityBaseName = ability.replace(/(\(.*\))+/g, "").replace(/\s+$/, "");
               var entry = $.grep(db, function(e) { return e["name"] == abilityBaseName; });
               if(entry && entry.length > 0) {
@@ -6404,27 +6787,27 @@ var ikrpg = ikrpg || {};
                 character[identifier]["page"] = page;
               }
             });
-            
+
           })();
-          
+
           // #### Skills #### \\
           (function() {
-            
+
             var db = ikrpg.generator.db.skill;
-            
+
             var skills = histogram($.merge(data["military skills"], data["occupational skills"]));
-            
+
             var skillsKeys = Object.keys(skills) || [];
             var index = 0;
             $.each(skillsKeys.sort(), function(i, skill) {
               var value = skills[skill];
-              
+
               character["s"+(index+1)] = character["s"+(index+1)] || { "title": "", "stat": "", "base": "", "lvl": "", "sum": "" };
               character["s"+(index+1)]["title"] = skill;
               character["s"+(index+1)]["lvl"] = value;
-              
+
               var skillBaseName = skill.replace(/(\(.*\))+/g, "").replace(/\s+$/, "");
-              
+
               var stats = db[skillBaseName];
               if(stats && stats.length > 0) {
                 var stat = stats[0];
@@ -6443,7 +6826,7 @@ var ikrpg = ikrpg || {};
                 var stat = stats[1];
                 var lowerStat = stat.toLowerCase();
                 index += 1;
-                
+
                 character["s"+(index+1)] = character["s"+(index+1)] || {};
                 character["s"+(index+1)]["title"] = skill;
                 character["s"+(index+1)]["stat"] = lowerStat;
@@ -6459,20 +6842,20 @@ var ikrpg = ikrpg || {};
               }
               index += 1;
             });
-            
+
           })();
-          
+
           // #### Spells #### \\
           (function() {
-            
+
             var db = ikrpg.generator.db.spell;
-            
+
             var spells = data["spells"] || [];
-            
+
             $.each(spells.sort(), function(index, spell) {
               character["spell"+(index+1)] = character["spell"+(index+1)] || { "title": "", "cost": "", "rng": "", "aoe": "", "pow": "", "up": "", "off": "", "description": "" };
               character["spell"+(index+1)]["title"] = spell;
-              
+
               var spellData = db[spell];
               if(spellData) {
                 character["spell"+(index+1)]["cost"] = spellData["cost"];
@@ -6484,122 +6867,122 @@ var ikrpg = ikrpg || {};
                 character["spell"+(index+1)]["description"] = spellData["description"];
               }
             });
-            
+
           })();
-          
+
           // #### Gear #### \\
           (function() {
-            
+
             var gears = data["gear"] || [];
-            
+
             $.each(gears.sort(), function(index, gear) {
               character["gear"+(index+1)] = character["gear"+(index+1)] || { "title": "", "benefit": "" };
               character["gear"+(index+1)]["title"] = gear;
             });
-            
+
           })();
-          
+
           // #### Ranged Weapons #### \\
           (function() {
-            
+
             var db = ikrpg.generator.db.rangedWeapon;
-            
+
             var rangedWeapons = data["ranged weapons"] || [];
-            
+
             $.each(rangedWeapons.sort(), function(index, name) {
               var rat = "rat"+(index+1);
-              
+
               character[rat] = character[rat] || { "name": "", "rat": "", "rng": "", "aoe": "", "pow": "", "notes": "", "ammo": "" };
               character[rat]["name"] = name;
-              
+
               var weapon = db[name];
               if(weapon) {
                 var skill = weapon["skill"];
                 var ratMod = parseInt(weapon["rat-mod"]) || 0;
-                
+
                 character[rat]["skill"] = skill;
                 character[rat]["ratmod"] = ratMod;
                 character[rat]["rng"] = weapon["rng"];
                 character[rat]["pow"] = weapon["pow"];
                 character[rat]["notes"] = weapon["notes"];
                 character[rat]["ammo"] = weapon["ammo"];
-                
+
                 var mskills = histogram(data["military skills"]);
                 var lvl = mskills[skill];
-                
+
                 var skillDB = ikrpg.generator.db.skill;
                 var mskill = skillDB[skill];
-                
+
                 if(mskill) {
                   var stat = mskill[0];
                   var base = parseInt(character[stat.toLowerCase()]) || 0;
-                  
+
                   character[rat]["rat"] = base + lvl + ratMod;
                 } else {
                   character[rat]["rat"] = "";
                 }
               }
             });
-            
+
           })();
-          
+
           // #### Melee Weapons #### \\
           (function() {
-            
+
             var db = ikrpg.generator.db.meleeWeapon;
-            
+
             var meleeWeapons = data["melee weapons"] || [];
-            
+
             $.each(meleeWeapons.sort(), function(index, name) {
               var mat = "mat"+(index+1);
-              
+
               character[mat] = character[mat] || { "name": "", "mat": "", "pow": "", "ps": "", "notes": "" };
               character[mat]["name"] = name;
-              
+
               var weapon = db[name];
               if(weapon) {
                 var skill = weapon["skill"];
                 var matMod = parseInt(weapon["mat-mod"]) || 0;
-                
+
                 character[mat]["skill"] = skill;
                 character[mat]["matmod"] = matMod;
                 character[mat]["pow"] = weapon["pow"];
                 character[mat]["notes"] = weapon["notes"];
-                
+
                 var str = parseInt(character["str"]) || 0;
                 var pow = parseInt(weapon["pow"]) || 0;
                 character[mat]["ps"] = pow + str;
-                
+
                 var mskills = histogram(data["military skills"]);
                 var lvl = mskills[skill];
-                
+
                 var skillDB = ikrpg.generator.db.skill;
                 var mskill = skillDB[skill];
-                
+
                 if(mskill) {
                   var stat = mskill[0];
                   var base = parseInt(character[stat.toLowerCase()]) || 0;
-                  
+
                   character[mat]["mat"] = base + lvl + matMod;
                 } else {
                   character[mat]["mat"] = "";
                 }
               }
             });
-            
+
           })();
-          
+
           // #### Worn Armor #### \\
           (function() {
-            
+
             var db = ikrpg.generator.db.wornArmor;
-            
+
             var armors = data["armors"] || [];
-            
+
             $.each(armors.sort(), function(index, armor) {
               character["wornarmor"+(index+1)] = character["wornarmor"+(index+1)] || { "name": "", "notes": "", "spd": "", "def": "", "arm": "" };
               character["wornarmor"+(index+1)]["name"] = armor;
-                            
+
               var wornArmorData = db[armor];
               if(wornArmorData) {
                 character["wornarmor"+(index+1)]["description"] = wornArmorData["description"];
@@ -6608,55 +6991,55 @@ var ikrpg = ikrpg || {};
                 character["wornarmor"+(index+1)]["arm"] = wornArmorData["arm"];
               }
             });
-            
+
           })();
-          
+
           // #### Notes #### \\
           (function() {
-            
+
             var notes = data["notes"] || [];
-            
+
             $.each(notes.sort(), function(index, note) {
               character["note"+(index+1)] = character["note"+(index+1)] || { "title": "", "text": "" };
               character["note"+(index+1)]["text"] = note;
             });
-            
+
           })();
-          
+
           // #### Languages #### \\
           (function() {
-            
+
             var languages = data["languages"] || [];
-            
+
             $.each(languages.sort(), function(index, language) {
               if(index < 3) character["spokenlanguage"+(index+1)] = language;
               else character["spokenlanguage"+((index % 3)+1)] += ", "+language;
             });
-            
+
           })();
-          
+
           // #### Connections #### \\
           (function() {
-            
+
             var connections = data["connections"] || [];
-            
+
             $.each(connections.sort(), function(index, connection) {
               character["connection"+(index+1)] = character["connection"+(index+1)] || { "name": "", "notes": "", "page": "" };
               character["connection"+(index+1)]["name"] = connection;
             });
-            
+
           })();
-          
+
           // #### Computed SPD #### \\
           (function() {
             // SPD base stat minus SPD malus from first worn armor
-            
+
             var spd = parseInt(character["spd"]);
             var wornArmor1 = character["wornarmor1"];
-            
+
             if(wornArmor1) {
               var spdMalus = parseInt(wornArmor1["spd"]);
-              
+
               if(spdMalus) {
                 character["computed-spd"] = spd + spdMalus;
               } else {
@@ -6665,39 +7048,39 @@ var ikrpg = ikrpg || {};
             } else {
               character["computed-spd"] = spd;
             }
-            
+
           })();
-          
+
           // #### ARM, DEF, INI, CMD #### \\
           (function() {
-            
+
             var wornarmor1 = character["wornarmor1"];
-            
+
             if(wornarmor1) {
               var def = wornarmor1["def"];
               var arm = wornarmor1["arm"];
               character["defequipmentmodifiers"] = def;
               character["armarmormodifiers"] = arm;
             }
-            
+
             var mskills = histogram(data["military skills"]);
-                        
+
             if(mskills["Shield"]) {
               var shield = parseInt(mskills["Shield"]);
               character["armshieldmodifier"] = shield;
             } else {
               character["armshieldmodifier"] = 0;
             }
-            
+
             var oskills = histogram(data["occupational skills"]);
-            
+
             if(oskills["Command"]) {
               var command = parseInt(oskills["Command"]);
               character["cmdcommandskill"] = command;
             } else {
               character["cmdcommandskill"] = 0;
             }
-            
+
             var spd = character["computed-spd"] || 0;
             var agl = character["agl"] || 0;
             var per = character["per"] || 0;
@@ -6713,34 +7096,34 @@ var ikrpg = ikrpg || {};
             var int = character["int"] || 0;
             var cmdcommandskill = character["cmdcommandskill"] || 0;
             var cmdabilitymodifier = character["cmdabilitymodifier"] || 0;
-            
+
             character["def"] = spd + agl + per + defracialmodifier + defequipmentmodifiers;
             character["arm"] = phy + armshieldmodifier + armarmormodifiers + armothermodifiers;
             character["ini"] = spd + prw + per + iniequipmentmodifiers + iniadditionalmodifiers;
             character["cmd"] = int + cmdcommandskill + cmdabilitymodifier;
-            
+
           })();
-          
+
         })();
-        
+
         // ### Fill character sheet with the data stored in character ### \\
         ikrpg.sheet.fill(null, character);
-        
+
         window.location.hash = "";
         window.location.hash = "character-sheet-page1";
-        
+
       }
-      
+
       ikrpg.generator.fillCharacterSheet = fillCharacterSheet;
-      
+
     })();
-      
+
   })();
-  
-  
+
+
   // # Bind character generation to submit button # \\
   (function() {
     $("#generator-submit").click(ikrpg.generator.fillCharacterSheet);
   })();
-  
+
 })();
